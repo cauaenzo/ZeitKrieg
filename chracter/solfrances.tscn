@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://6ul8jrqi6es"]
+
+[ext_resource type="Script" path="res://script/solfrances.gd" id="1_e7gpm"]
+[ext_resource type="PackedScene" uid="uid://ckbcn3lsny3ge" path="res://scenes/caixademunicao.tscn" id="2_a7pmy"]
+[ext_resource type="PackedScene" uid="uid://c2w3f1y16jne0" path="res://scenes/tiroinimi.tscn" id="3_ux4nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpmsw"]
+size = Vector2(33, 80.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mbxm"]
+size = Vector2(367, 54)
+
+[node name="solfrances" type="CharacterBody2D" groups=["inimigo"]]
+script = ExtResource("1_e7gpm")
+caixmunic = ExtResource("2_a7pmy")
+atirar = ExtResource("3_ux4nu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 64.0
+offset_bottom = 147.0
+scale = Vector2(0.51454, 0.553632)
+color = Color(0.862761, 0, 0.0518426, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 40.75)
+shape = SubResource("RectangleShape2D_qpmsw")
+
+[node name="detector" type="Area2D" parent="."]
+
+[node name="percepcao" type="CollisionShape2D" parent="detector"]
+position = Vector2(15.5, 39)
+shape = SubResource("RectangleShape2D_2mbxm")
+
+[node name="Timertemporario" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="detector" to="." method="_on_detector_body_entered"]
+[connection signal="timeout" from="Timertemporario" to="." method="_on_timertemporario_timeout"]
