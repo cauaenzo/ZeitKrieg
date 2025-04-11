@@ -44,17 +44,17 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left") and abaixado == 0:
 		$prosprite.flip_h = true
 		lado = -1
 		$prosprite.play("walk")
 		
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") and abaixado == 0:
 		$prosprite.flip_h = false
 		lado = 1
 		$prosprite.play("walk")
 	
-	if not Input.is_action_pressed("right") and not Input.is_action_pressed("left"):
+	if not Input.is_action_pressed("right") and not Input.is_action_pressed("left") and abaixado == 0:
 		$prosprite.play("idle")
 	#if Input.is_action_just_pressed("ataque") and municao > 0:
 		#var bala = tiro.instantiate()
@@ -96,6 +96,15 @@ func _physics_process(delta: float) -> void:
 			abaixado = 1
 			$CollisionShape2D.disabled = true
 			velocidade = 125
+			$prosprite.play("down")
+	
+	if Input.is_action_pressed("left") and abaixado == 1:
+		$prosprite.flip_h = true
+		lado = -1
+		
+	if Input.is_action_pressed("right") and abaixado == 1:
+		$prosprite.flip_h = false
+		lado = 1
 	
 	if Input.is_action_just_pressed("jump"):
 		if abaixado == 1:
