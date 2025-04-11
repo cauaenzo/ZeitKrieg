@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnyf7ctn1uqor"]
+
+[ext_resource type="PackedScene" uid="uid://b3si8pm36ie1w" path="res://chracter/protagotemp.tscn" id="1_sl63c"]
+[ext_resource type="PackedScene" uid="uid://6ul8jrqi6es" path="res://chracter/solfrances.tscn" id="2_qkhxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onkc0"]
+size = Vector2(2086, 169)
+
+[node name="fase3" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = 485.0
+offset_right = 2088.0
+offset_bottom = 726.0
+color = Color(0.47451, 0.180392, 0.0588235, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1032, 584)
+shape = SubResource("RectangleShape2D_onkc0")
+
+[node name="protagotemp" parent="." instance=ExtResource("1_sl63c")]
+position = Vector2(512, 257)
+
+[node name="solfrances" parent="." instance=ExtResource("2_qkhxd")]
+position = Vector2(158, 359)

@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3si8pm36ie1w"]
+
+[ext_resource type="Script" path="res://script/protagotemp.gd" id="1_qo61a"]
+[ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="2_j8ym0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v71vw"]
+size = Vector2(33, 80.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq45q"]
+size = Vector2(33, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j33s"]
+size = Vector2(26, 24)
+
+[node name="protagotemp" type="CharacterBody2D" groups=["protagonista"]]
+script = ExtResource("1_qo61a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 64.0
+offset_bottom = 147.0
+scale = Vector2(0.51454, 0.553632)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_top = 41.0
+offset_right = 64.0
+offset_bottom = 114.0
+scale = Vector2(0.51454, 0.553632)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 40.75)
+shape = SubResource("RectangleShape2D_v71vw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 61)
+shape = SubResource("RectangleShape2D_sq45q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="attesq" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attesq"]
+position = Vector2(-17, 36)
+shape = SubResource("RectangleShape2D_2j33s")
+disabled = true
+
+[node name="attdir" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attdir"]
+position = Vector2(51, 36)
+shape = SubResource("RectangleShape2D_2j33s")
+disabled = true
+
+[node name="tempdacel" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="attesqti" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="attdirti" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Time Rewinder" type="Node" parent="."]
+script = ExtResource("2_j8ym0")
+rewind_duration = 5.0
+
+[connection signal="body_entered" from="attesq" to="." method="_on_attesq_body_entered"]
+[connection signal="body_entered" from="attdir" to="." method="_on_attdir_body_entered"]
+[connection signal="timeout" from="tempdacel" to="." method="_on_tempdacel_timeout"]
+[connection signal="timeout" from="attesqti" to="." method="_on_attesqti_timeout"]
+[connection signal="timeout" from="attdirti" to="." method="_on_attdirti_timeout"]

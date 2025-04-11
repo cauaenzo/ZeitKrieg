@@ -24,6 +24,7 @@ offset_top = 41.0
 offset_right = 64.0
 offset_bottom = 114.0
 scale = Vector2(0.51454, 0.553632)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16.5, 40.75)

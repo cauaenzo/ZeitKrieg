@@ -114,3 +114,6 @@ func danolev():
 	vida1 -= 25
 	if vida1 == 0:
 		queue_free()
+
+func danolam():
+	queue_free()

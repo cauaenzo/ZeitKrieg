@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://s1hc5xvilq3x"]
+[gd_scene load_steps=6 format=3 uid="uid://s1hc5xvilq3x"]
 
 [ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="1_5qngd"]
 [ext_resource type="PackedScene" uid="uid://d1bxr5fq3irdh" path="res://scenes/hud.tscn" id="2_4i355"]
 [ext_resource type="PackedScene" uid="uid://6ul8jrqi6es" path="res://chracter/solfrances.tscn" id="2_ipkxi"]
+[ext_resource type="PackedScene" uid="uid://d05yh27x1k6a2" path="res://chracter/solfracesbruto.tscn" id="4_u3fq6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aautf"]
 size = Vector2(2086, 169)
 
 [node name="fase1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [460.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -17.0
@@ -23,18 +25,17 @@ position = Vector2(1032, 584)
 shape = SubResource("RectangleShape2D_aautf")
 
 [node name="protagonista" parent="." instance=ExtResource("1_5qngd")]
-position = Vector2(543, 405)
+position = Vector2(333, 401)
 
 [node name="solfrances" parent="." instance=ExtResource("2_ipkxi")]
 position = Vector2(865, 405)
 
-[node name="solfrances2" parent="." instance=ExtResource("2_ipkxi")]
-position = Vector2(1037, 403)
-
 [node name="solfrances3" parent="." instance=ExtResource("2_ipkxi")]
 position = Vector2(1811, 404)
 
-[node name="solfrances4" parent="." instance=ExtResource("2_ipkxi")]
-position = Vector2(1347, 405)
-
 [node name="hud" parent="." instance=ExtResource("2_4i355")]
+
+[node name="solfracesbruto" parent="." instance=ExtResource("4_u3fq6")]
+position = Vector2(1435, 347)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

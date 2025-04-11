@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://6ul8jrqi6es"]
+[gd_scene load_steps=7 format=3 uid="uid://6ul8jrqi6es"]
 
 [ext_resource type="Script" path="res://script/solfrances.gd" id="1_e7gpm"]
 [ext_resource type="PackedScene" uid="uid://ckbcn3lsny3ge" path="res://scenes/caixademunicao.tscn" id="2_a7pmy"]
@@ -7,10 +7,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpmsw"]
 size = Vector2(33, 80.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mbxm"]
-size = Vector2(367, 54)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b67lw"]
+size = Vector2(400, 20)
 
-[node name="solfrances" type="CharacterBody2D" groups=["inimigo"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqk14"]
+size = Vector2(132, 63)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["inimigo"]]
 script = ExtResource("1_e7gpm")
 caixmunic = ExtResource("2_a7pmy")
 atirar = ExtResource("3_ux4nu")
@@ -28,13 +31,22 @@ shape = SubResource("RectangleShape2D_qpmsw")
 
 [node name="detector" type="Area2D" parent="."]
 
-[node name="percepcao" type="CollisionShape2D" parent="detector"]
-position = Vector2(15.5, 39)
-shape = SubResource("RectangleShape2D_2mbxm")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
+position = Vector2(-179, 30)
+shape = SubResource("RectangleShape2D_b67lw")
 
-[node name="Timertemporario" type="Timer" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="detector"]
+position = Vector2(17, 42)
+shape = SubResource("RectangleShape2D_kqk14")
+
+[node name="temptiro" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="tempmoonwalk" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
 
 [connection signal="body_entered" from="detector" to="." method="_on_detector_body_entered"]
-[connection signal="timeout" from="Timertemporario" to="." method="_on_timertemporario_timeout"]
+[connection signal="timeout" from="temptiro" to="." method="_on_temptiro_timeout"]
+[connection signal="timeout" from="tempmoonwalk" to="." method="_on_tempmoonwalk_timeout"]

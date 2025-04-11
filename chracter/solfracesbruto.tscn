@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d05yh27x1k6a2"]
+
+[ext_resource type="Script" path="res://script/solfracesbruto.gd" id="1_rb4c2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdkmv"]
+size = Vector2(39, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rhot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5adrw"]
+size = Vector2(447, 20)
+
+[node name="solfracesbruto" type="CharacterBody2D" groups=["inimigo"]]
+script = ExtResource("1_rb4c2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 39.0
+offset_bottom = 89.0
+color = Color(0.72549, 0.211765, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19.5, 44.5)
+shape = SubResource("RectangleShape2D_wdkmv")
+
+[node name="lamina" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamina"]
+position = Vector2(-5, 27)
+shape = SubResource("RectangleShape2D_6rhot")
+
+[node name="detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
+position = Vector2(-212.5, 28)
+shape = SubResource("RectangleShape2D_5adrw")
+
+[connection signal="body_entered" from="lamina" to="." method="_on_lamina_body_entered"]
+[connection signal="body_entered" from="detector" to="." method="_on_detector_body_entered"]
