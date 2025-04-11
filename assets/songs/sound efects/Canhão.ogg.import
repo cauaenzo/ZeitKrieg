@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://df2sgau2h4foy"
+path="res://.godot/imported/Canhão.ogg-3759ca82783321137864de47a1fca40d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/sound efects/Canhão.ogg"
+dest_files=["res://.godot/imported/Canhão.ogg-3759ca82783321137864de47a1fca40d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

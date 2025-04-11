@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://s1hc5xvilq3x"]
+[gd_scene load_steps=8 format=3 uid="uid://s1hc5xvilq3x"]
 
 [ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="1_5qngd"]
+[ext_resource type="Script" path="res://script/fase_1.gd" id="1_u254h"]
 [ext_resource type="PackedScene" uid="uid://d1bxr5fq3irdh" path="res://scenes/hud.tscn" id="2_4i355"]
 [ext_resource type="PackedScene" uid="uid://6ul8jrqi6es" path="res://chracter/solfrances.tscn" id="2_ipkxi"]
 [ext_resource type="PackedScene" uid="uid://d05yh27x1k6a2" path="res://chracter/solfracesbruto.tscn" id="4_u3fq6"]
+[ext_resource type="AudioStream" uid="uid://bcayffmpvofhd" path="res://assets/songs/musics/Fase 1.2.ogg" id="6_mwx3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aautf"]
 size = Vector2(2086, 169)
 
 [node name="fase1" type="Node2D"]
+script = ExtResource("1_u254h")
 metadata/_edit_horizontal_guides_ = [460.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -38,4 +41,6 @@ position = Vector2(1811, 404)
 [node name="solfracesbruto" parent="." instance=ExtResource("4_u3fq6")]
 position = Vector2(1435, 347)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musicsfsse1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mwx3p")
+autoplay = true

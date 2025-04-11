@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2ihoclx36iiu"
+path="res://.godot/imported/Fase2Vento.ogg-085f4fac6049e94a5370c0c676c06589.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/sound efects/Fase2Vento.ogg"
+dest_files=["res://.godot/imported/Fase2Vento.ogg-085f4fac6049e94a5370c0c676c06589.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

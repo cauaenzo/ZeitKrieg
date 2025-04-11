@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ongc3t3q8670"
+path="res://.godot/imported/Tiroteio.ogg-67ad4387c61da31ae2bf3e44e7bd843a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/sound efects/Tiroteio.ogg"
+dest_files=["res://.godot/imported/Tiroteio.ogg-67ad4387c61da31ae2bf3e44e7bd843a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
