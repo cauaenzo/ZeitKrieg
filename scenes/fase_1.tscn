@@ -33,6 +33,12 @@ position = Vector2(333, 401)
 [node name="solfrances" parent="." instance=ExtResource("2_ipkxi")]
 position = Vector2(865, 405)
 
+[node name="solfrances2" parent="." instance=ExtResource("2_ipkxi")]
+position = Vector2(1001, 400)
+
+[node name="solfrances4" parent="." instance=ExtResource("2_ipkxi")]
+position = Vector2(725, 390)
+
 [node name="solfrances3" parent="." instance=ExtResource("2_ipkxi")]
 position = Vector2(1811, 404)
 

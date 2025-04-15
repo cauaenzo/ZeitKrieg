@@ -1,10 +1,14 @@
-AudioStreamPlayer2D
 AnimatedSprite2D
+AnimationPlayer
+AnimationTree
+Label
+ColorRect
+VBoxContainer
+TextEdit
+Button
+Control
+AudioStreamPlayer2D
 AudioStreamPlayer
 CollisionShape2D
 Timer
 Area2D
-ColorRect
-CharacterBody2D
-RayCast2D
-Time Rewinder

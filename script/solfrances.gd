@@ -12,16 +12,29 @@ var dpers = 50
 var primeirotiro = 1
 var direction = 1
 
+var numero = randi() % 4 + 1
+var nome_sprite = "spritefrances" + str(numero)
+@onready var inimigo = get_node(nome_sprite)
+
 func _ready() -> void:
-	$temptiro.stop()
+	#$temptiro.stop()
+	#var numero = randi() % 4 + 1
+	#inimigo = "$spritefrances" + str(numero)
+	print(nome_sprite)
+	inimigo.visible = true
+	pass
 
 func _physics_process(delta: float) -> void:
 	if direction == 1 and primeirotiro == 1:
 		position.x += speed * delta
 		$detector/CollisionShape2D.position.x = 100
+		inimigo.play("walk")
+		inimigo.flip_h = false
 	else:
 		position.x -= speed * delta
 		$detector/CollisionShape2D.position.x = -100
+		inimigo.play("walk")
+		inimigo.flip_h = true
 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
