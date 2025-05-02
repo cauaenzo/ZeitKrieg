@@ -92,3 +92,4 @@ mono_crash.*
 
 # Auto-generated thumbnails
 *.thumbnail.png
+assets/.DS_Store
