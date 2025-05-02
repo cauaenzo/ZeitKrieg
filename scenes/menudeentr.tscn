@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" path="res://script/menudeentrar.gd" id="1_ma14x"]
 
-[sub_resource type="Animation" id="Animation_ebrr7"]
-resource_name = "butinienc"
-
 [sub_resource type="Animation" id="Animation_wx126"]
 length = 0.001
 tracks/0/type = "value"
@@ -19,6 +16,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+
+[sub_resource type="Animation" id="Animation_ebrr7"]
+resource_name = "butinienc"
 
 [sub_resource type="Animation" id="Animation_lfrxu"]
 resource_name = "butinisai"

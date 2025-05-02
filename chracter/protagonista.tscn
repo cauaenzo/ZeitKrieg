@@ -1,10 +1,12 @@
-[gd_scene load_steps=30 format=3 uid="uid://css5swjn42ufd"]
+[gd_scene load_steps=36 format=3 uid="uid://css5swjn42ufd"]
 
 [ext_resource type="Script" path="res://script/protagonista.gd" id="1_vvfye"]
 [ext_resource type="PackedScene" uid="uid://buvsoktmryxka" path="res://scenes/tiro.tscn" id="2_4ngje"]
 [ext_resource type="Texture2D" uid="uid://dnu3mk4nvthyv" path="res://assets/alemaoagachadoandando.png" id="3_31pjt"]
 [ext_resource type="Texture2D" uid="uid://bhj51084v861u" path="res://assets/sprite-alemao.png" id="3_gxx80"]
 [ext_resource type="Texture2D" uid="uid://c5uqj4r61yptd" path="res://assets/pixilart-sprite.png" id="3_kt1ly"]
+[ext_resource type="Script" path="res://addons/Time Rewinder/rewind_property.gd" id="6_nkwsv"]
+[ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="6_wt84y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkfck"]
 atlas = ExtResource("3_31pjt")
@@ -177,6 +179,30 @@ size = Vector2(33, 80.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1hlw"]
 size = Vector2(33, 40)
 
+[sub_resource type="Resource" id="Resource_ods8q"]
+script = ExtResource("6_nkwsv")
+node_path = NodePath("..")
+property_name = "position"
+time_saved = 15.0
+
+[sub_resource type="Resource" id="Resource_40nl2"]
+script = ExtResource("6_nkwsv")
+node_path = NodePath("../prosprite")
+property_name = "frame"
+time_saved = 15.0
+
+[sub_resource type="Resource" id="Resource_6mo7u"]
+script = ExtResource("6_nkwsv")
+node_path = NodePath("../prosprite")
+property_name = "animation"
+time_saved = 15.0
+
+[sub_resource type="Resource" id="Resource_4kjm5"]
+script = ExtResource("6_nkwsv")
+node_path = NodePath("../prosprite")
+property_name = "flip_h"
+time_saved = 15.0
+
 [node name="protagonista" type="CharacterBody2D" groups=["protagonista"]]
 script = ExtResource("1_vvfye")
 tiro = ExtResource("2_4ngje")
@@ -199,3 +225,7 @@ position = Vector2(17, 63)
 shape = SubResource("RectangleShape2D_t1hlw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Time Rewinder" type="Node" parent="."]
+script = ExtResource("6_wt84y")
+rewind_resources = Array[ExtResource("6_nkwsv")]([SubResource("Resource_ods8q"), SubResource("Resource_40nl2"), SubResource("Resource_6mo7u"), SubResource("Resource_4kjm5")])

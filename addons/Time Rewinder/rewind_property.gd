@@ -1,5 +1,6 @@
 # res://RewindResource.gd
-class_name RewindResource extends Resource
+class_name RewindResource 
+extends Resource
 
 @export var node_path: NodePath
 @export var property_name: String = ""

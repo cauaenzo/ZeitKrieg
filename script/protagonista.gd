@@ -11,6 +11,7 @@ var municao = 6
 var caixademuni = 0
 var abaixado = 0
 @export var tiro:PackedScene
+@onready var rewinder = $"Time Rewinder"
 #@export var hit:PackedScene
 #@export var hit2:PackedScene
 
@@ -19,6 +20,13 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	print("ESTADO DO REWIND:", rewinder.rewinding)
+	if rewinder.rewinding:
+		return 
+	
+	if Input.is_action_just_pressed("timerewinding"):
+		rewinder.rewind()
+	
 	if not is_on_floor():
 		velocity.y += grav
 

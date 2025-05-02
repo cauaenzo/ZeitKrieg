@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfasd3po2ktgd"]
+
+[ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="1_i6mqi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrysl"]
+size = Vector2(1265, 36)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="protagonista" parent="." instance=ExtResource("1_i6mqi")]
+position = Vector2(-262, 230)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(325.5, 406)
+shape = SubResource("RectangleShape2D_lrysl")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -308.0
+offset_top = 387.0
+offset_right = 958.0
+offset_bottom = 427.0

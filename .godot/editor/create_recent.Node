@@ -1,14 +1,14 @@
+Time Rewinder
+Node
+ColorRect
+CollisionShape2D
+StaticBody2D
+Timer
+Area2D
+CharacterBody2D
 AnimatedSprite2D
 AnimationPlayer
 AnimationTree
 Label
-ColorRect
 VBoxContainer
 TextEdit
-Button
-Control
-AudioStreamPlayer2D
-AudioStreamPlayer
-CollisionShape2D
-Timer
-Area2D

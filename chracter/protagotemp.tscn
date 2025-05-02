@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3si8pm36ie1w"]
+[gd_scene load_steps=7 format=3 uid="uid://b3si8pm36ie1w"]
 
 [ext_resource type="Script" path="res://script/protagotemp.gd" id="1_qo61a"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="2_j8ym0"]
@@ -11,6 +11,9 @@ size = Vector2(33, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2j33s"]
 size = Vector2(26, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bnxi"]
+size = Vector2(299, 121.5)
 
 [node name="protagotemp" type="CharacterBody2D" groups=["protagonista"]]
 script = ExtResource("1_qo61a")
@@ -52,6 +55,13 @@ position = Vector2(51, 36)
 shape = SubResource("RectangleShape2D_2j33s")
 disabled = true
 
+[node name="paralisar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="paralisar"]
+position = Vector2(17, 8.75)
+shape = SubResource("RectangleShape2D_2bnxi")
+disabled = true
+
 [node name="tempdacel" type="Timer" parent="."]
 wait_time = 5.0
 
@@ -65,8 +75,18 @@ wait_time = 0.5
 script = ExtResource("2_j8ym0")
 rewind_duration = 5.0
 
+[node name="tempodepoder" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="temppoderpar" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="body_entered" from="attesq" to="." method="_on_attesq_body_entered"]
 [connection signal="body_entered" from="attdir" to="." method="_on_attdir_body_entered"]
+[connection signal="body_entered" from="paralisar" to="." method="_on_paralisar_body_entered"]
 [connection signal="timeout" from="tempdacel" to="." method="_on_tempdacel_timeout"]
 [connection signal="timeout" from="attesqti" to="." method="_on_attesqti_timeout"]
 [connection signal="timeout" from="attdirti" to="." method="_on_attdirti_timeout"]
+[connection signal="done_rewinding" from="Time Rewinder" to="." method="_on_time_rewinder_done_rewinding"]
+[connection signal="timeout" from="tempodepoder" to="." method="_on_tempodepoder_timeout"]
+[connection signal="timeout" from="temppoderpar" to="." method="_on_temppoderpar_timeout"]

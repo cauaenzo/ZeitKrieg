@@ -1,153 +1,3 @@
-#extends CharacterBody2D
-#
-#var velocidadedotempo: Vector2 = Vector2.ZERO
-#var speed: float = 600.0
-#var dir: Vector2 = Vector2.ZERO
-#var accel: float = 10.0
-#var friction: float = 8.0
-#var velocidade = 250
-#var JUMP_VELOCITY = -200.0
-#var grav = 10
-#var lado = 1
-#var vida1 = 100
-#var energia = 500
-#var countdown = 1
-#var correndo = 0
-#var abaixado = 0
-#var jaacel = 0
-#
-##Poderes de regredir no tempo
-#var replay_duration: float = 3.0
-#var rewinding: bool = false
-#var rewinding_values = {
-	#"position": [],
-	#"rotation": [],
-	#"velocity": [],
-#}
-#
-#
-#func _ready() -> void:
-	#pass
-#
-## Função de processamento de física (chamada a cada frame)
-#func _physics_process(delta: float) -> void:
-	## Gravidade - Se o personagem não está no chão, aplica gravidade
-	#if not is_on_floor():
-		#velocity.y += grav
-#
-	## Aplica o movimento com a função move_and_slide (passando a velocidade)
-	#velocidadedotempo = move_and_slide(velocity)
-#
-	## Verifica se não está fazendo o rewind
-	#if not rewinding:
-		## Verifica se o número de frames registrados atingiu o limite
-		#if replay_duration * Engine.get_physics_steps_per_second() == rewinding_values["position"].size():
-			## Remover o primeiro elemento de cada lista de replays, se houver
-			#for key in rewinding_values.keys():
-				#if rewinding_values[key].size() > 0:
-					#rewinding_values[key].remove(0)  # Em Godot 4.3, usa `remove(0)` ao invés de `pop_front()`
-#
-			## Adiciona os novos dados de posição, rotação e velocidade
-			#rewinding_values["position"].append(global_position)
-			#rewinding_values["rotation"].append(rotation)
-			#rewinding_values["velocity"].append(velocity)
-	#else:
-		## Chama a função de retroceder o tempo
-		#compute_rewind(delta)
-#
-	## Controle de pulo
-	#if Input.is_action_just_pressed("jump") and is_on_floor() and abaixado == 0:
-		#velocity.y = JUMP_VELOCITY
-#
-	## Pega a direção de movimento com base no input do usuário
-	#var direction := Input.get_axis("left", "right")
-	#
-	## Se houver input de direção
-	#if direction:
-		#if is_on_floor():
-			#if Input.is_action_pressed("run"):
-				#velocity.x = direction * velocidade * 1.5  # Acelera se estiver correndo
-			#else:
-				#velocity.x = direction * velocidade  # Velocidade normal
-		#else:
-			#velocity.x = abs(velocity.x) * direction  # Mantém a direção mesmo no ar
-	#else:
-		## Se não houver input, desacelera o personagem
-		#if is_on_floor():
-			#velocity.x = move_toward(velocity.x, 0, velocidade)  # Desacelera quando não estiver se movendo
-#
-	## Aplica o movimento com a função move_and_slide
-	#move_and_slide(velocity)
-#
-#
-	#if Input.is_action_pressed("left"):
-		##$macacocinza1.flip_h = false
-		#lado = -1
-		##$macacocinza1.play("walk")
-		#
-	#if Input.is_action_pressed("right"):
-		##$macacocinza1.flip_h = true
-		#lado = 1
-		##$macacocinza1.play("walk")
-	#
-	##if Input.is_action_just_pressed("ataque") and municao > 0:
-		##var bala = tiro.instantiate()
-		##
-	#
-	#if Input.is_action_just_pressed("ataque") and abaixado == 0:
-		#pass
-		#
-		#
-	#if Input.is_action_just_pressed("agachar") and jaacel == 0:
-		#if abaixado == 0:
-			#abaixado = 1
-			#$ColorRect.hide()
-			#$CollisionShape2D.disabled = true
-			#velocidade = 125
-	#
-	#if Input.is_action_just_pressed("jump") and jaacel == 0:
-		#if abaixado == 1:
-			#abaixado = 0
-			#$ColorRect.show()
-			#$CollisionShape2D.disabled = false
-			#velocidade = 250
-			#
-	#if Input.is_action_just_pressed("acelerar") and energia >= 200 and jaacel == 0 and abaixado == 0:
-		#jaacel = 1
-		#velocidade = 750
-		#$tempdacel.start()
-		#
-	#if Input.is_action_just_pressed("ataque") and lado == -1:
-		#$attesq/CollisionShape2D.disabled = false
-		#$attesqti.start()
-		#
-	#if Input.is_action_just_pressed("ataque") and lado == 1:
-		#$attdir/CollisionShape2D.disabled = false
-		#$attdirti.start()
-#
-#func danolev():
-	#vida1 -= 25
-	#if vida1 == 0:
-		#queue_free()
-#
-#func _on_tempdacel_timeout() -> void:
-	#jaacel = 0
-	#velocidade = 250
-#
-#func _on_attesq_body_entered(body: Node2D) -> void:
-	#if body.has_method("inibaleado"):
-		#body.inibaleado()
-#
-#func _on_attdir_body_entered(body: Node2D) -> void:
-	#if body.has_method("inibaleado"):
-		#body.inibaleado()
-#
-#func _on_attesqti_timeout() -> void:
-	#$attesq/CollisionShape2D.disabled = true
-#
-#func _on_attdirti_timeout() -> void:
-	#$attdir/CollisionShape2D.disabled = true
-
 extends CharacterBody2D
 
 var velocidadedotempo: Vector2 = Vector2.ZERO
@@ -164,16 +14,6 @@ var countdown = 1
 var correndo = 0
 var abaixado = 0
 var jaacel = 0
-
-# Poderes de regredir no tempo
-var replay_duration: float = 3.0
-var rewinding: bool = false
-var rewinding_values = {
-	"position": [],
-	"rotation": [],
-	"velocity": [],
-}
-
 # Função de inicialização
 func _ready() -> void:
 	pass
@@ -188,24 +28,6 @@ func _physics_process(delta: float) -> void:
 	# então você deve usar a função corretamente para `CharacterBody2D`.
 	# Não atribuímos o resultado a uma variável, pois move_and_slide já aplica o movimento.
 	move_and_slide()
-
-	# Verifica se não está fazendo o rewind
-	#if not rewinding:
-		# Verifica se o número de frames registrados atingiu o limite
-		#if replay_duration * Engine.physics_fps == rewinding_values["position"].size():  # Usando Engine.physics_fps
-			# Remover o primeiro elemento de cada lista de replays, se houver
-			#for key in rewinding_values.keys():
-				#if rewinding_values[key].size() > 0:
-					#rewinding_values[key].remove(0)  # Substitui `pop_front()` por `remove(0)` em Godot 4.3
-
-			# Adiciona os novos dados de posição, rotação e velocidade
-			#rewinding_values["position"].append(global_position)
-			#rewinding_values["rotation"].append(rotation)
-			#rewinding_values["velocity"].append(velocity)
-	#else:
-		# Chama a função de retroceder o tempo (defina ou remova esta função)
-		# compute_rewind(delta) não está definida no seu código. Crie-a ou remova a linha.
-		#pass  # Remova esta linha ou substitua por uma implementação real de "rewind".
 
 	# Controle de pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor() and abaixado == 0:
@@ -228,6 +50,10 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			velocity.x = move_toward(velocity.x, 0, velocidade)  # Desacelera quando não estiver se movendo
 
+
+	if Input.is_action_pressed("timerewinding"):  # Defina isso no Input Map (ex: tecla Z)
+		_on_time_rewinder_done_rewinding()
+		$tempodepoder.start()
 	# Aplica o movimento com a função move_and_slide (sem argumentos)
 	move_and_slide()
 
@@ -256,6 +82,12 @@ func _physics_process(delta: float) -> void:
 			$ColorRect.show()
 			$CollisionShape2D.disabled = false
 			velocidade = 250
+	
+	if Input.is_action_just_pressed("pararpoder"):
+		$paralisar/CollisionShape2D3.disabled = false
+		$temppoderpar.start()
+		
+		
 
 	# Controle de aceleração
 	if Input.is_action_just_pressed("acelerar") and energia >= 200 and jaacel == 0 and abaixado == 0:
@@ -297,3 +129,20 @@ func _on_attesqti_timeout() -> void:
 
 func _on_attdirti_timeout() -> void:
 	$attdir/CollisionShape2D.disabled = true
+
+
+func _on_tempodepoder_timeout() -> void:
+	$Rewind.stop_rewind()
+
+
+func _on_time_rewinder_done_rewinding() -> void:
+	pass # Replace with function body.
+
+
+func _on_paralisar_body_entered(body: Node2D) -> void:
+	if body.has_method("paralizar"):
+		body.paralizar()
+
+
+func _on_temppoderpar_timeout() -> void:
+	$paralisar/CollisionShape2D3.disabled = true

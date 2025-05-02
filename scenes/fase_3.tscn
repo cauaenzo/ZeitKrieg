@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnyf7ctn1uqor"]
+[gd_scene load_steps=5 format=3 uid="uid://bnyf7ctn1uqor"]
 
 [ext_resource type="PackedScene" uid="uid://b3si8pm36ie1w" path="res://chracter/protagotemp.tscn" id="1_sl63c"]
-[ext_resource type="PackedScene" uid="uid://6ul8jrqi6es" path="res://chracter/solfrances.tscn" id="2_qkhxd"]
+[ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="3_2xkob"]
+[ext_resource type="PackedScene" uid="uid://duj5pcel4u7jw" path="res://chracter/solmutad.tscn" id="3_g4tbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onkc0"]
 size = Vector2(2086, 169)
@@ -24,5 +25,8 @@ shape = SubResource("RectangleShape2D_onkc0")
 [node name="protagotemp" parent="." instance=ExtResource("1_sl63c")]
 position = Vector2(512, 257)
 
-[node name="solfrances" parent="." instance=ExtResource("2_qkhxd")]
-position = Vector2(158, 359)
+[node name="Time Rewinder" type="Node" parent="."]
+script = ExtResource("3_2xkob")
+
+[node name="solmutad" parent="." instance=ExtResource("3_g4tbi")]
+position = Vector2(1309, 318)
