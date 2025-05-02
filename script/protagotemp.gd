@@ -14,19 +14,21 @@ var countdown = 1
 var correndo = 0
 var abaixado = 0
 var jaacel = 0
+@onready var rewinder = $"Time Rewinder"
 # Função de inicialização
 func _ready() -> void:
 	pass
 
 # Função de processamento de física (chamada a cada frame)
 func _physics_process(delta: float) -> void:
-	# Aplicar gravidade se o personagem não estiver no chão
 	if not is_on_floor():
 		velocity.y += grav
+	if rewinder.rewinding:
+		return 
 
-	# Em Godot 4.3, move_and_slide() não recebe argumentos diretamente,
-	# então você deve usar a função corretamente para `CharacterBody2D`.
-	# Não atribuímos o resultado a uma variável, pois move_and_slide já aplica o movimento.
+	if Input.is_action_just_pressed("timerewinding"):
+		rewinder.rewind()
+
 	move_and_slide()
 
 	# Controle de pulo

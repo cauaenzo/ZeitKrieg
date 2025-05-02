@@ -211,12 +211,10 @@ tiro = ExtResource("2_4ngje")
 texture_filter = 1
 position = Vector2(16, 40)
 sprite_frames = SubResource("SpriteFrames_38b3m")
-animation = &"down"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.78
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(16, 43)
 shape = SubResource("RectangleShape2D_ds6iv")
 

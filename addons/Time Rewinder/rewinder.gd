@@ -33,21 +33,21 @@ func update_rewind_values():
 func compute_rewind(delta: float):
 	# Accumulate the real time passed, accounting for the multiplier
 	real_time_accumulated += delta
-	print("Real time accumulated: ", real_time_accumulated)  # Debug print
+	#print("Real time accumulated: ", real_time_accumulated)  # Debug print
 
 	# Increase the rewind accumulator based on the speed_scale multiplier
 	rewind_accumulator += speed_scale
-	print("Rewind accumulator: ", rewind_accumulator)  # Debug print
+	#print("Rewind accumulator: ", rewind_accumulator)  # Debug print
 
-	print("total_time_to_rewind: ", total_time_to_rewind)
+	#print("total_time_to_rewind: ", total_time_to_rewind)
 	game_time_accumulated = real_time_accumulated * speed_scale
 	
-	print("game time accumulated: ", game_time_accumulated)
+	#print("game time accumulated: ", game_time_accumulated)
 
 	# If we need to rewind, calculate the number of frames to pop based on the accumulator
 	if rewind_accumulator >= 1.0:
 		var frames_to_pop = int(rewind_accumulator)
-		print("Frames to pop: ", frames_to_pop)  # Debug print
+		#print("Frames to pop: ", frames_to_pop)  # Debug print
 		
 		
 
@@ -67,15 +67,15 @@ func compute_rewind(delta: float):
 
 		# Subtract the number of frames popped from the accumulator
 		rewind_accumulator -= frames_to_pop
-		print("Rewind accumulator after popping: ", rewind_accumulator)  # Debug print
+		#print("Rewind accumulator after popping: ", rewind_accumulator)  # Debug print
 
 func rewind():
 	rewinding = true
 	real_time_accumulated = 0.0  # Reset real time accumulator
 	rewind_accumulator = 0.0  # Reset the rewind accumulator
-	print("Rewind started.")  # Debug print
+	#print("Rewind started.")  # Debug print
 
 func stop_rewind():
 	rewinding = false
 	done_rewinding.emit()
-	print("Rewind stopped.")  # Debug print
+	#print("Rewind stopped.")  # Debug print

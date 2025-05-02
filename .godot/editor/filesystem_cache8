@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746207541
+::res://::1746208209
 control_2.gd::GDScript::-1::1744736123::0::1::::<>Control<>::
 icon.svg::CompressedTexture2D::545105506425612832::1742576850::1743526474::1::::<><>::
 Teste.tscn::PackedScene::7511306027019438619::1746207077::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn
@@ -12,7 +12,7 @@ rewinder.tscn::PackedScene::4771329315503685839::1746207077::0::1::::<><>::
 rewind_property.gd::GDScript::-1::1746205461::0::1::::RewindResource<>Resource<>::
 TimeRewinder.gd::GDScript::-1::1744399661::0::1::::<>EditorPlugin<>::
 TimeRewinder.png::CompressedTexture2D::3912959293574215312::1743699472::1743699473::1::::<><>::
-::res://assets/::1744742425
+::res://assets/::1746208209
 alemaoagachadoandando.png::CompressedTexture2D::8114726649431548201::1744399974::1744399980::1::::<><>::
 alemaoagachadoparado.png::CompressedTexture2D::6743479704601750264::1744399974::1744399980::1::::<><>::
 Cape.png::CompressedTexture2D::5055495361584534725::1743528548::1743528561::1::::<><>::
@@ -24,6 +24,10 @@ francesandando2.png::CompressedTexture2D::5808608561865830737::1744742415::17447
 francesandando3.png::CompressedTexture2D::3736931860966782135::1744742416::1744742425::1::::<><>::
 francesandando4.png::CompressedTexture2D::406839576596271519::1744742416::1744742425::1::::<><>::
 francesparado1.png::CompressedTexture2D::7741865349310031764::1744742416::1744742425::1::::<><>::
+fundo.png::CompressedTexture2D::7820100961707784367::1746208209::1746208313::1::::<><>::
+layer1.png::CompressedTexture2D::1922452405808586311::1746208209::1746208313::1::::<><>::
+layer2.png::CompressedTexture2D::4128387864788155196::1746208209::1746208313::1::::<><>::
+layer3.png::CompressedTexture2D::7289295102945803692::1746208209::1746208313::1::::<><>::
 pixilart-sprite.png::CompressedTexture2D::6920783326520810053::1744397590::1744399609::1::::<><>::
 sprite-alemao.png::CompressedTexture2D::2898191294779710396::1744397335::1744399609::1::::<><>::
 ::res://assets/enemy/::1742577304
@@ -39,7 +43,7 @@ Fase2Vento.ogg::AudioStreamOggVorbis::9071325994525898524::1744399605::174439960
 Grito 1.ogg::AudioStreamOggVorbis::381994884821580386::1744399605::1744399609::1::::<><>::
 RecMissil.ogg::AudioStreamOggVorbis::9206380566208798221::1744399605::1744399609::1::::<><>::
 Tiroteio.ogg::AudioStreamOggVorbis::1009850096579634205::1744399605::1744399609::1::::<><>::
-::res://chracter/::1746207077
+::res://chracter/::1746208235
 protagonista.tscn::PackedScene::6075254176564584709::1746207077::0::1::::<><>::res://script/protagonista.gd<>uid://buvsoktmryxka::::res://scenes/tiro.tscn<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>res://addons/Time Rewinder/rewind_property.gd<>res://addons/Time Rewinder/rewinder.gd
 protagotemp.tscn::PackedScene::4389412579973920458::1746207077::0::1::::<><>::res://script/protagotemp.gd<>res://addons/Time Rewinder/rewinder.gd
 solfracesbruto.tscn::PackedScene::8977385651680019047::1745955769::0::1::::<><>::res://script/solfracesbruto.gd
@@ -54,13 +58,13 @@ hud.tscn::PackedScene::8987664796941461617::1746207077::0::1::::<><>::res://scri
 menudeentr.tscn::PackedScene::5766996301342256780::1745952979::0::1::::<><>::res://script/menudeentrar.gd
 tiro.tscn::PackedScene::3834667951427167296::1746207077::0::1::::<><>::res://script/tiro.gd
 tiroinimi.tscn::PackedScene::6715066864874903117::1746207077::0::1::::<><>::res://script/tiroinimi.gd
-::res://script/::1746206798
+::res://script/::1746208235
 attsoesq.gd::GDScript::-1::1744399661::0::1::::<>Area2D<>::
 caixademunicao.gd::GDScript::-1::1743184108::0::1::::<>Area2D<>::
-fase_1.gd::GDScript::-1::1744400324::0::1::::<>Node2D<>::
+fase_1.gd::GDScript::-1::1746208235::0::1::::<>Node2D<>::
 hud.gd::GDScript::-1::1743105270::0::1::::<>CanvasLayer<>::
 menudeentrar.gd::GDScript::-1::1744742687::0::1::::<>Control<>::
-protagonista.gd::GDScript::-1::1746206798::0::1::::<>CharacterBody2D<>::
+protagonista.gd::GDScript::-1::1746208235::0::1::::<>CharacterBody2D<>::
 protagotemp.gd::GDScript::-1::1746205461::0::1::::<>CharacterBody2D<>::
 solfracesbruto.gd::GDScript::-1::1744399661::0::1::::<>CharacterBody2D<>::
 solfrances.gd::GDScript::-1::1744745616::0::1::::<>CharacterBody2D<>::
