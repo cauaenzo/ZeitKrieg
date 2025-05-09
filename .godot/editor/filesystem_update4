@@ -1,16 +1,13 @@
+res://chracter/protagotemp.tscn
+res://chracter/protagonista.tscn
+res://scenes/fase_1.tscn
+res://scenes/transisaofass_1a_2.tscn
+res://scenes/fase_2.tscn
+res://scenes/fase_3.tscn
+res://scenes/paraaxayer.tscn
+res://chracter/solfrances.tscn
+res://scenes/menudeentr.tscn
+res://scenes/caixademunicao.tscn
 res://script/protagonista.gd
 res://script/protagotemp.gd
-res://addons/Time Rewinder/rewinder.gd
-res://addons/Time Rewinder/rewind_property.gd
-res://addons/Time Rewinder/TimeRewinder.gd
-res://scenes/fase_3.tscn
-res://chracter/protagotemp.tscn
-res://scenes/hud.tscn
-res://scenes/tiro.tscn
-res://scenes/tiroinimi.tscn
-res://chracter/protagonista.tscn
-res://chracter/solfrances.tscn
-res://chracter/solmutad.tscn
-res://addons/Time Rewinder/rewinder.tscn
-res://Teste.tscn
-res://scenes/fase_1.tscn
+res://script/fase_1.gd

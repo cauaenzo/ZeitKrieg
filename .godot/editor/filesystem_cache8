@@ -1,18 +1,83 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746208209
+::res://::1746807605
 control_2.gd::GDScript::-1::1744736123::0::1::::<>Control<>::
 icon.svg::CompressedTexture2D::545105506425612832::1742576850::1743526474::1::::<><>::
-Teste.tscn::PackedScene::7511306027019438619::1746207077::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn
-::res://addons/::1743699467
-::res://addons/Time Rewinder/::1746207077
+Teste.tscn::PackedScene::7511306027019438619::1746208624::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn
+::res://addons/::1746722772
+::res://addons/post_processing/::1746722773
+AboutShaders.txt::TextFile::-1::1746722772::0::1::::<><>::
+plugin.cfg::TextFile::-1::1746722773::0::1::::<><>::
+plugin.gd::GDScript::-1::1746722773::0::1::::<>EditorPlugin<>::
+::res://addons/post_processing/assets/::1746722774
+ascii.png::CompressedTexture2D::2141360773754192645::1746722772::1746722773::1::::<><>::
+green_palette.png::CompressedTexture2D::8185358337912483168::1746722772::1746722773::1::::<><>::
+interesting_palette.png::CompressedTexture2D::924421708198772010::1746722772::1746722773::1::::<><>::
+lens_aura.png::CompressedTexture2D::1973845580059734251::1746722772::1746722774::1::::<><>::
+lens_divine.png::CompressedTexture2D::7673707833710087908::1746722772::1746722774::1::::<><>::
+lens_flare.gd::GDScript::-1::1746722772::0::1::::<>CanvasLayer<>::
+::res://addons/post_processing/node/::1746722774
+post_process.gd::GDScript::-1::1746722773::0::1::::PostProcess<>CanvasLayer<>::
+post_process.svg::CompressedTexture2D::7083733316557221807::1746722773::1746722774::1::::<><>::
+::res://addons/post_processing/node/children/::1746722773
+analog_monitor.tscn::PackedScene::6113914654972264438::1746722773::0::1::::<><>::res://addons/post_processing/shaders/analog_monitor.gdshader
+ascii.tscn::PackedScene::771190717667982951::1746722773::0::1::::<><>::res://addons/post_processing/shaders/ascii.gdshader<>uid://5rj5tlylm7bt::::res://addons/post_processing/assets/ascii.png
+bloom.tscn::PackedScene::8664505778992057278::1746722773::0::1::::<><>::res://addons/post_processing/shaders/bloom.gdshader
+blur.tscn::PackedScene::6425577764243116475::1746722773::0::1::::<><>::res://addons/post_processing/shaders/blur.gdshader
+ChromaticAberration.tscn::PackedScene::4961342803693938042::1746722772::0::1::::<><>::res://addons/post_processing/shaders/chromatic.gdshader
+circular_waves.tscn::PackedScene::4209190063248863122::1746722773::0::1::::<><>::res://addons/post_processing/shaders/circularwaves.gdshader
+color_correction.tscn::PackedScene::1192965354359260424::1746722773::0::1::::<><>::res://addons/post_processing/shaders/color_correction.gdshader
+CRT.tscn::PackedScene::853638233774828207::1746722772::0::1::::<><>::res://addons/post_processing/shaders/CRT.gdshader
+directional_drift.tscn::PackedScene::1653825686750096368::1746722773::0::1::::<><>::res://addons/post_processing/shaders/directional_drift_shader.gdshader
+fish_eye.tscn::PackedScene::6912869810897747453::1746722773::0::1::::<><>::res://addons/post_processing/shaders/fish_eye.gdshader
+glitch.tscn::PackedScene::8720789723906256751::1746722773::0::1::::<><>::res://addons/post_processing/shaders/glitch.gdshader
+grain.tscn::PackedScene::4292478084888169079::1746722773::0::1::::<><>::res://addons/post_processing/shaders/grain.gdshader
+kaleidoscope.gdshader::Shader::-1::1746722773::0::1::::<><>::
+outline.gdshader::Shader::-1::1746722773::0::1::::<><>::
+outline.tscn::PackedScene::6535530282075149803::1746722773::0::1::::<><>::res://addons/post_processing/node/children/outline.gdshader
+palette.tscn::PackedScene::4406747118655394051::1746722773::0::1::::<><>::res://addons/post_processing/shaders/palette_limiter.gdshader<>uid://nf2dcuadvrh7::::res://addons/post_processing/assets/interesting_palette.png
+particle_storm.tscn::PackedScene::6535530282075149803::1746722773::0::1::::<><>::res://addons/post_processing/shaders/particle_storm.gdshader
+pixelate.tscn::PackedScene::3704951628114277069::1746722773::0::1::::<><>::res://addons/post_processing/shaders/pixelate.gdshader
+screen_shake.tscn::PackedScene::4655088095747071713::1746722773::0::1::::<><>::res://addons/post_processing/shaders/screen_shake.gdshader
+speed_lines.tscn::PackedScene::1559735154541049243::1746722773::0::1::::<><>::res://addons/post_processing/shaders/speed_lines.gdshader
+vignette.tscn::PackedScene::5992778862305601298::1746722773::0::1::::<><>::res://addons/post_processing/shaders/vignette.gdshader
+::res://addons/post_processing/resource/::1746722773
+fish_eye_example.tres::Resource/PostProcessingConfiguration::7648541116057852530::1746722773::0::1::::<><>::res://addons/post_processing/resource/post_processing_configuration.gd
+no_effects_example.tres::Resource/PostProcessingConfiguration::6534858646291410700::1746722773::0::1::::<><>::res://addons/post_processing/resource/post_processing_configuration.gd
+post_processing_configuration.gd::GDScript::-1::1746722773::0::1::::PostProcessingConfiguration<>Resource<>::
+::res://addons/post_processing/shaders/::1746722774
+analog_monitor.gdshader::Shader::-1::1746722773::0::1::::<><>::
+ascii.gdshader::Shader::-1::1746722773::0::1::::<><>::
+bloom.gdshader::Shader::-1::1746722773::0::1::::<><>::
+blur.gdshader::Shader::-1::1746722773::0::1::::<><>::
+chromatic.gdshader::Shader::-1::1746722773::0::1::::<><>::
+circularwaves.gdshader::Shader::-1::1746722773::0::1::::<><>::
+CLREDIT.gdshaderinc::ShaderInclude::-1::1746722773::0::1::::<><>::
+color_correction.gdshader::Shader::-1::1746722773::0::1::::<><>::
+CRT.gdshader::Shader::-1::1746722773::0::1::::<><>::
+directional_drift_shader.gdshader::Shader::-1::1746722773::0::1::::<><>::
+dither.gdshader::Shader::-1::1746722773::0::1::::<><>::
+fish_eye.gdshader::Shader::-1::1746722773::0::1::::<><>::
+glitch.gdshader::Shader::-1::1746722773::0::1::::<><>::
+grain.gdshader::Shader::-1::1746722773::0::1::::<><>::
+LensFlares.gdshader::Shader::-1::1746722773::0::1::::<><>::
+painted.gdshader::Shader::-1::1746722773::0::1::::<><>::
+palette_limiter.gdshader::Shader::-1::1746722773::0::1::::<><>::
+particle_storm.gdshader::Shader::-1::1746722773::0::1::::<><>::
+pixelate.gdshader::Shader::-1::1746722773::0::1::::<><>::
+post_process.svg::CompressedTexture2D::4587763318090617621::1746722773::1746722774::1::::<><>::
+screen_shake.gdshader::Shader::-1::1746722773::0::1::::<><>::
+speed_lines.gdshader::Shader::-1::1746722773::0::1::::<><>::
+vignette.gdshader::Shader::-1::1746722773::0::1::::<><>::
+water.gdshader::Shader::-1::1746722773::0::1::::<><>::
+::res://addons/Time Rewinder/::1746208624
 plugin.cfg::TextFile::-1::1743699472::0::1::::<><>::
 README.md::TextFile::-1::1743699472::0::1::::<><>::
-rewinder.gd::GDScript::-1::1744399661::0::1::::<>Node<>::
-rewinder.tscn::PackedScene::4771329315503685839::1746207077::0::1::::<><>::
-rewind_property.gd::GDScript::-1::1746205461::0::1::::RewindResource<>Resource<>::
-TimeRewinder.gd::GDScript::-1::1744399661::0::1::::<>EditorPlugin<>::
+rewinder.gd::GDScript::-1::1746208624::0::1::::<>Node<>::
+rewinder.tscn::PackedScene::4771329315503685839::1746208624::0::1::::<><>::
+rewind_property.gd::GDScript::-1::1746208321::0::1::::RewindResource<>Resource<>::
+TimeRewinder.gd::GDScript::-1::1746208321::0::1::::<>EditorPlugin<>::
 TimeRewinder.png::CompressedTexture2D::3912959293574215312::1743699472::1743699473::1::::<><>::
-::res://assets/::1746208209
+::res://assets/::1746726516
 alemaoagachadoandando.png::CompressedTexture2D::8114726649431548201::1744399974::1744399980::1::::<><>::
 alemaoagachadoparado.png::CompressedTexture2D::6743479704601750264::1744399974::1744399980::1::::<><>::
 Cape.png::CompressedTexture2D::5055495361584534725::1743528548::1743528561::1::::<><>::
@@ -30,42 +95,56 @@ layer2.png::CompressedTexture2D::4128387864788155196::1746208209::1746208313::1:
 layer3.png::CompressedTexture2D::7289295102945803692::1746208209::1746208313::1::::<><>::
 pixilart-sprite.png::CompressedTexture2D::6920783326520810053::1744397590::1744399609::1::::<><>::
 sprite-alemao.png::CompressedTexture2D::2898191294779710396::1744397335::1744399609::1::::<><>::
+tileCORRETCTEST.png::CompressedTexture2D::874187007722895206::1746212731::1746212735::1::::<><>::
+zeittile.png::CompressedTexture2D::7454731154733006962::1746211937::1746211951::1::::<><>::
 ::res://assets/enemy/::1742577304
-::res://assets/songs/::1744743612
-brutoidle.png::CompressedTexture2D::78433208451247510::1744743609::1744743612::1::::<><>::
-::res://assets/songs/musics/::1744399609
-Fase 1.2.ogg::AudioStreamOggVorbis::2528264789629639845::1744399605::1744399609::1::::<><>::
-::res://assets/songs/sound efects/::1744399609
-barulhosmetalicos.ogg::AudioStreamOggVorbis::4486209917173727857::1744399605::1744399609::1::::<><>::
-Canhão.ogg::AudioStreamOggVorbis::7567048121395649984::1744399605::1744399609::1::::<><>::
-Fase2GotejamentoC.ogg::AudioStreamOggVorbis::9099144453505498525::1744399605::1744399609::1::::<><>::
-Fase2Vento.ogg::AudioStreamOggVorbis::9071325994525898524::1744399605::1744399609::1::::<><>::
-Grito 1.ogg::AudioStreamOggVorbis::381994884821580386::1744399605::1744399609::1::::<><>::
-RecMissil.ogg::AudioStreamOggVorbis::9206380566208798221::1744399605::1744399609::1::::<><>::
-Tiroteio.ogg::AudioStreamOggVorbis::1009850096579634205::1744399605::1744399609::1::::<><>::
-::res://chracter/::1746208235
-protagonista.tscn::PackedScene::6075254176564584709::1746207077::0::1::::<><>::res://script/protagonista.gd<>uid://buvsoktmryxka::::res://scenes/tiro.tscn<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>res://addons/Time Rewinder/rewind_property.gd<>res://addons/Time Rewinder/rewinder.gd
-protagotemp.tscn::PackedScene::4389412579973920458::1746207077::0::1::::<><>::res://script/protagotemp.gd<>res://addons/Time Rewinder/rewinder.gd
+::res://assets/simpleassets/::1746722345
+barracheia.png::CompressedTexture2D::2980036681972308005::1746576730::1746722344::1::::<><>::
+barravazia.png::CompressedTexture2D::3555885837431692316::1746576660::1746722345::1::::<><>::
+::res://assets/songs/::1746726701
+brutoidle.png::CompressedTexture2D::78433208451247510::1744743608::1746726701::1::::<><>::
+::res://assets/songs/musics/::1746726702
+Arg8 - Musica final.ogg::AudioStreamOggVorbis::4381026017434338939::1746574204::1746726701::1::::<><>::
+Fase 1.2.ogg::AudioStreamOggVorbis::2528264789629639845::1744399604::1746726701::1::::<><>::
+Fase 2.wav::AudioStreamWAV::7200935367591303198::1746574472::1746726702::1::::<><>::
+::res://assets/songs/sound efects/::1746726701
+Arg1 - Atmosfera.ogg::AudioStreamOggVorbis::267065715024383480::1746574198::1746726701::1::::<><>::
+Arg2 - Explosao.ogg::AudioStreamOggVorbis::9048209615760680702::1746574198::1746726701::1::::<><>::
+Arg4 - Passos.ogg::AudioStreamOggVorbis::3647960449004461191::1746574200::1746726701::1::::<><>::
+Arg5 - Skip Time.ogg::AudioStreamOggVorbis::2187042109801582246::1746574202::1746726701::1::::<><>::
+Arg7 - Desintegracao.ogg::AudioStreamOggVorbis::1408687642242892255::1746574202::1746726701::1::::<><>::
+barulhosmetalicos.ogg::AudioStreamOggVorbis::4486209917173727857::1744399604::1746726701::1::::<><>::
+Canhão.ogg::AudioStreamOggVorbis::7567048121395649984::1744399604::1746726701::1::::<><>::
+Fase2GotejamentoC.ogg::AudioStreamOggVorbis::9099144453505498525::1744399604::1746726701::1::::<><>::
+Fase2Vento.ogg::AudioStreamOggVorbis::9071325994525898524::1744399604::1746726701::1::::<><>::
+Grito 1.ogg::AudioStreamOggVorbis::381994884821580386::1744399604::1746726701::1::::<><>::
+grito 2.ogg::AudioStreamOggVorbis::612527729541018679::1746574246::1746726701::1::::<><>::
+RecMissil.ogg::AudioStreamOggVorbis::9206380566208798221::1744399604::1746726701::1::::<><>::
+Tiroteio.ogg::AudioStreamOggVorbis::1009850096579634205::1744399604::1746726701::1::::<><>::
+::res://chracter/::1746807626
+protagonista.tscn::PackedScene::6075254176564584709::1746807626::0::1::::<><>::res://script/protagonista.gd<>uid://buvsoktmryxka::::res://scenes/tiro.tscn<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
+protagotemp.tscn::PackedScene::4389412579973920458::1746807626::0::1::::<><>::res://script/protagotemp.gd<>res://addons/Time Rewinder/rewinder.gd<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>res://addons/Time Rewinder/rewind_property.gd<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>res://addons/post_processing/node/post_process.gd<>res://addons/post_processing/resource/post_processing_configuration.gd<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
 solfracesbruto.tscn::PackedScene::8977385651680019047::1745955769::0::1::::<><>::res://script/solfracesbruto.gd
-solfrances.tscn::PackedScene::65231441932064694::1746207077::0::1::::<><>::res://script/solfrances.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://c2w3f1y16jne0::::res://scenes/tiroinimi.tscn<>uid://vjsrvma48cmv::::res://assets/frances2parado.png<>uid://co0y61ekney3j::::res://assets/francesandando2.png<>uid://bnu2aat1rqcr0::::res://assets/frances4parado.png<>uid://f2cuaf7dw5w2::::res://assets/francesandando4.png<>uid://hea7nel51kr2::::res://assets/frances3parado.png<>uid://btigysm0k2e12::::res://assets/francesandando3.png<>uid://dikhnkh26k47a::::res://assets/francesparado1.png<>uid://cxus76uaks2fq::::res://assets/francesandando1.png
-solmutad.tscn::PackedScene::8583466732083340952::1746207077::0::1::::<><>::res://script/solmutad.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://buvsoktmryxka::::res://scenes/tiro.tscn
-::res://scenes/::1746207077
+solfrances.tscn::PackedScene::65231441932064694::1746807626::0::1::::<><>::res://script/solfrances.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://c2w3f1y16jne0::::res://scenes/tiroinimi.tscn<>uid://vjsrvma48cmv::::res://assets/frances2parado.png<>uid://co0y61ekney3j::::res://assets/francesandando2.png<>uid://bnu2aat1rqcr0::::res://assets/frances4parado.png<>uid://f2cuaf7dw5w2::::res://assets/francesandando4.png<>uid://hea7nel51kr2::::res://assets/frances3parado.png<>uid://btigysm0k2e12::::res://assets/francesandando3.png<>uid://dikhnkh26k47a::::res://assets/francesparado1.png<>uid://cxus76uaks2fq::::res://assets/francesandando1.png
+solmutad.tscn::PackedScene::8583466732083340952::1746208624::0::1::::<><>::res://script/solmutad.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://buvsoktmryxka::::res://scenes/tiro.tscn
+::res://scenes/::1746807626
 caixademunicao.tscn::PackedScene::5476940319309720784::1743525765::0::1::::<><>::res://script/caixademunicao.gd
 controlesdojogo.tscn::PackedScene::7736706151934869703::1745952979::0::1::::<><>::res://control_2.gd
-fase_1.tscn::PackedScene::1317503209823604423::1746207077::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn<>res://script/fase_1.gd<>uid://d1bxr5fq3irdh::::res://scenes/hud.tscn<>uid://6ul8jrqi6es::::res://chracter/solfrances.tscn<>uid://d05yh27x1k6a2::::res://chracter/solfracesbruto.tscn<>uid://bcayffmpvofhd::::res://assets/songs/musics/Fase 1.2.ogg
-fase_3.tscn::PackedScene::3348781582477940173::1746207077::0::1::::<><>::uid://b3si8pm36ie1w::::res://chracter/protagotemp.tscn<>res://addons/Time Rewinder/rewinder.gd<>uid://duj5pcel4u7jw::::res://chracter/solmutad.tscn
-hud.tscn::PackedScene::8987664796941461617::1746207077::0::1::::<><>::res://script/hud.gd
+fase_1.tscn::PackedScene::1317503209823604423::1746807626::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn<>res://script/fase_1.gd<>uid://6ul8jrqi6es::::res://chracter/solfrances.tscn<>uid://d05yh27x1k6a2::::res://chracter/solfracesbruto.tscn<>uid://bcayffmpvofhd::::res://assets/songs/musics/Fase 1.2.ogg<>uid://dnuyb6cntsymc::::res://scenes/paraaxayer.tscn
+fase_2.tscn::PackedScene::4320671731820334405::1746807626::0::1::::<><>::
+fase_3.tscn::PackedScene::3348781582477940173::1746807626::0::1::::<><>::uid://b3si8pm36ie1w::::res://chracter/protagotemp.tscn<>res://addons/Time Rewinder/rewinder.gd<>uid://duj5pcel4u7jw::::res://chracter/solmutad.tscn
 menudeentr.tscn::PackedScene::5766996301342256780::1745952979::0::1::::<><>::res://script/menudeentrar.gd
-tiro.tscn::PackedScene::3834667951427167296::1746207077::0::1::::<><>::res://script/tiro.gd
-tiroinimi.tscn::PackedScene::6715066864874903117::1746207077::0::1::::<><>::res://script/tiroinimi.gd
-::res://script/::1746208235
+paraaxayer.tscn::PackedScene::8114465199005469530::1746807626::0::1::::<><>::uid://djod6j42c22x4::::res://assets/fundo.png<>uid://db38vi6nlkgbs::::res://assets/layer3.png<>uid://by227ena22j7q::::res://assets/layer2.png<>uid://2nirl34isqvn::::res://assets/layer1.png
+tiro.tscn::PackedScene::3834667951427167296::1746208624::0::1::::<><>::res://script/tiro.gd
+tiroinimi.tscn::PackedScene::6715066864874903117::1746208624::0::1::::<><>::res://script/tiroinimi.gd
+transisaofass_1a_2.tscn::PackedScene::4701670935669541121::1746807626::0::1::::<><>::
+::res://script/::1746734000
 attsoesq.gd::GDScript::-1::1744399661::0::1::::<>Area2D<>::
 caixademunicao.gd::GDScript::-1::1743184108::0::1::::<>Area2D<>::
-fase_1.gd::GDScript::-1::1746208235::0::1::::<>Node2D<>::
-hud.gd::GDScript::-1::1743105270::0::1::::<>CanvasLayer<>::
+fase_1.gd::GDScript::-1::1746731918::0::1::::<>Node2D<>::
 menudeentrar.gd::GDScript::-1::1744742687::0::1::::<>Control<>::
-protagonista.gd::GDScript::-1::1746208235::0::1::::<>CharacterBody2D<>::
-protagotemp.gd::GDScript::-1::1746205461::0::1::::<>CharacterBody2D<>::
+protagonista.gd::GDScript::-1::1746722826::0::1::::<>CharacterBody2D<>::
+protagotemp.gd::GDScript::-1::1746734000::0::1::::<>CharacterBody2D<>::
 solfracesbruto.gd::GDScript::-1::1744399661::0::1::::<>CharacterBody2D<>::
 solfrances.gd::GDScript::-1::1744745616::0::1::::<>CharacterBody2D<>::
 solmutad.gd::GDScript::-1::1745955918::0::1::::<>CharacterBody2D<>::

@@ -1,14 +1,15 @@
-AnimatedSprite2D
-Time Rewinder
-Node
-ColorRect
+TextEdit
+Label
+TileMapLayer
+Timer
+TextureProgressBar
+CanvasLayer
 CollisionShape2D
 StaticBody2D
-Timer
 Area2D
-CharacterBody2D
-AnimationPlayer
-AnimationTree
-Label
-VBoxContainer
-TextEdit
+AudioStreamPlayer
+PostProcess
+ColorRect
+HBoxContainer
+Sprite2D
+ParallaxLayer

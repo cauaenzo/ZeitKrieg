@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var velocidade = 250
 const JUMP_VELOCITY = -200.0
 var grav = 10
@@ -11,7 +12,7 @@ var municao = 6
 var caixademuni = 0
 var abaixado = 0
 @export var tiro:PackedScene
-@onready var rewinder = $"Time Rewinder"
+@onready var munic = $CanvasLayer/nummuni
 #@export var hit:PackedScene
 #@export var hit2:PackedScene
 
@@ -20,12 +21,6 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	if rewinder.rewinding:
-		return 
-	
-	if Input.is_action_just_pressed("timerewinding"):
-		rewinder.rewind()
-	
 	if not is_on_floor():
 		velocity.y += grav
 
@@ -104,6 +99,7 @@ func _physics_process(delta: float) -> void:
 			$CollisionShape2D.disabled = true
 			velocidade = 125
 			$prosprite.play("down")
+			
 	
 	if Input.is_action_pressed("left") and abaixado == 1:
 		$prosprite.flip_h = true
@@ -128,6 +124,7 @@ func pegarmuni():
 
 func danolev():
 	vida1 -= 25
+	$CanvasLayer/vida.value = vida1
 	if vida1 == 0:
 		queue_free()
 
