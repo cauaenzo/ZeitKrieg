@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://b63ttqom4hs"]
+
+[ext_resource type="Script" path="res://script/introducaogame.gd" id="1_4grvc"]
+[ext_resource type="Texture2D" uid="uid://cm8gup5gqhggj" path="res://assets/zeitkrieg.png" id="2_j8w58"]
+
+[sub_resource type="Animation" id="Animation_0wxxu"]
+resource_name = "aparecer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nomedojogo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_co3hc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nomedojogo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_umyql"]
+resource_name = "desaparece"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nomedojogo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3citn"]
+_data = {
+"RESET": SubResource("Animation_co3hc"),
+"aparecer": SubResource("Animation_0wxxu"),
+"desaparece": SubResource("Animation_umyql")
+}
+
+[node name="introducaogame" type="Node"]
+script = ExtResource("1_4grvc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -17.0
+offset_top = -13.0
+offset_right = 1204.0
+offset_bottom = 680.0
+color = Color(0, 0, 0, 1)
+
+[node name="nomedojogo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(581, 323)
+scale = Vector2(3, 3)
+texture = ExtResource("2_j8w58")
+
+[node name="animacao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3citn")
+}
+
+[node name="aparece" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="desaparece" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="irmenu" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[connection signal="timeout" from="aparece" to="." method="_on_aparece_timeout"]
+[connection signal="timeout" from="desaparece" to="." method="_on_desaparece_timeout"]
+[connection signal="timeout" from="irmenu" to="." method="_on_irmenu_timeout"]

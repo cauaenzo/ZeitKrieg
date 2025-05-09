@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" path="res://script/protagonista.gd" id="1_vvfye"]
 [ext_resource type="PackedScene" uid="uid://buvsoktmryxka" path="res://scenes/tiro.tscn" id="2_4ngje"]
-[ext_resource type="Texture2D" uid="uid://dnu3mk4nvthyv" path="res://assets/alemaoagachadoandando.png" id="3_31pjt"]
 [ext_resource type="Texture2D" uid="uid://bhj51084v861u" path="res://assets/sprite-alemao.png" id="3_gxx80"]
 [ext_resource type="Texture2D" uid="uid://c5uqj4r61yptd" path="res://assets/pixilart-sprite.png" id="3_kt1ly"]
+[ext_resource type="Texture2D" uid="uid://chvhjbu5335bi" path="res://assets/AGACHADOANDANDO.png" id="3_vane3"]
 [ext_resource type="Texture2D" uid="uid://bqwq6j1ms26qi" path="res://assets/simpleassets/barravazia.png" id="7_gym1m"]
 [ext_resource type="Texture2D" uid="uid://bips1exqbnj3r" path="res://assets/simpleassets/barracheia.png" id="8_6hw1v"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkfck"]
-atlas = ExtResource("3_31pjt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmcgg"]
+atlas = ExtResource("3_vane3")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gwx8i"]
-atlas = ExtResource("3_31pjt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtoq6"]
+atlas = ExtResource("3_vane3")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0n5i"]
@@ -96,10 +96,10 @@ region = Rect2(1600, 0, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nkfck")
+"texture": SubResource("AtlasTexture_qmcgg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gwx8i")
+"texture": SubResource("AtlasTexture_dtoq6")
 }],
 "loop": true,
 "name": &"down",
@@ -187,15 +187,16 @@ tiro = ExtResource("2_4ngje")
 texture_filter = 1
 position = Vector2(16, 40)
 sprite_frames = SubResource("SpriteFrames_38b3m")
-animation = &"idle"
+animation = &"down"
 autoplay = "idle"
+frame_progress = 0.0584864
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16, 43)
 shape = SubResource("RectangleShape2D_ds6iv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(16, 43)
+position = Vector2(16, 63)
 shape = SubResource("RectangleShape2D_t1hlw")
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["protagonista"]]

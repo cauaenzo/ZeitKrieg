@@ -12,7 +12,6 @@ var municao = 6
 var caixademuni = 0
 var abaixado = 0
 @export var tiro:PackedScene
-@onready var munic = $CanvasLayer/nummuni
 #@export var hit:PackedScene
 #@export var hit2:PackedScene
 
@@ -70,6 +69,7 @@ func _physics_process(delta: float) -> void:
 		atiro.z_index = -1
 		atiro.setlado(lado)
 		get_tree().current_scene.add_child(atiro)
+		$CanvasLayer/nummuni.text = str(municao)
 		
 	if Input.is_action_just_pressed("recaregar") and caixademuni > 0:
 		if municao == 0:
