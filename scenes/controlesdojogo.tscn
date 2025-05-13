@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dihyojqyk0gjv"]
+[gd_scene load_steps=3 format=3 uid="uid://dihyojqyk0gjv"]
 
 [ext_resource type="Script" path="res://script/control_2.gd" id="1_ghlbh"]
+[ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="2_dqffo"]
 
 [node name="controlesdojogo" type="Control"]
 layout_mode = 3
@@ -20,9 +21,48 @@ color = Color(0, 0, 0, 1)
 [node name="controles" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 368.0
-offset_top = 88.0
-offset_right = 504.0
-offset_bottom = 111.0
-scale = Vector2(3, 3)
+offset_left = 328.0
+offset_top = 128.0
+offset_right = 815.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_dqffo")
+theme_override_font_sizes/font_size = 45
 text = "Controles do Jogo"
+
+[node name="controles2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -36.5
+offset_right = 166.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_dqffo")
+text = "A/D- player movement
+
+W/S- Pulo e Agachar
+
+Shift- Correr
+
+rewind time- Q
+
+botao esquerdo do mouse- Ataque"
+horizontal_alignment = 1
+
+[node name="voltar" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = 624.0
+offset_right = 74.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_dqffo")
+text = "Voltar"
+flat = true
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

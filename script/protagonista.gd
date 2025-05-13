@@ -65,7 +65,7 @@ func _physics_process(delta: float) -> void:
 		municao -= 1
 		var atiro = tiro.instantiate()
 		atiro.position.x = position.x+4
-		atiro.position.y = position.y+4
+		atiro.position.y = position.y+36
 		atiro.z_index = -1
 		atiro.setlado(lado)
 		get_tree().current_scene.add_child(atiro)

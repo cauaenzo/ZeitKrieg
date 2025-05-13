@@ -10,6 +10,7 @@ func _physics_process(delta :float) -> void:
 		position.x += velocidade * delta
 	else:
 		position.x -= velocidade * delta
+		$Bala.flip_v = true
 
 func setlado(novo_lado):
 	lado = novo_lado

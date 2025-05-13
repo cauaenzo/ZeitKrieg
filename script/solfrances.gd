@@ -47,7 +47,7 @@ func inibaleado():
 		queue_free()
 		var caixis = caixmunic.instantiate()
 		caixis.position.x = position.x
-		caixis.position.y = position.y+40
+		caixis.position.y = position.y+51
 		caixis.z_index = -1
 		get_tree().current_scene.add_child(caixis)
 	else:
@@ -67,7 +67,7 @@ func _on_temptiro_timeout() -> void:
 func _on_tiroinimigo() -> void:
 	var atiro = atirar.instantiate()
 	atiro.position.x = position.x+4
-	atiro.position.y = position.y+4
+	atiro.position.y = position.y+36
 	atiro.z_index = -1
 	get_tree().current_scene.add_child(atiro)
 

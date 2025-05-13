@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://s1hc5xvilq3x"]
+[gd_scene load_steps=12 format=4 uid="uid://s1hc5xvilq3x"]
 
 [ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="1_5qngd"]
 [ext_resource type="Script" path="res://script/fase_1.gd" id="1_u254h"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d05yh27x1k6a2" path="res://chracter/solfracesbruto.tscn" id="4_u3fq6"]
 [ext_resource type="AudioStream" uid="uid://bcayffmpvofhd" path="res://assets/songs/musics/Fase 1.2.ogg" id="6_mwx3p"]
 [ext_resource type="PackedScene" uid="uid://dnuyb6cntsymc" path="res://scenes/paraaxayer.tscn" id="7_isu1l"]
+[ext_resource type="Texture2D" uid="uid://dsnhfergjairv" path="res://assets/bunkrfechad1.png" id="8_cmos6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6d6l"]
 texture = ExtResource("2_8bx60")
@@ -24,7 +25,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_u6d6l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86fk6"]
-size = Vector2(73, 91)
+size = Vector2(45.5, 66.5)
 
 [node name="fase1" type="Node2D"]
 script = ExtResource("1_u254h")
@@ -59,16 +60,28 @@ position = Vector2(2797, 372)
 position = Vector2(3969, 359)
 
 [node name="solfrances8" parent="." instance=ExtResource("2_ipkxi")]
-position = Vector2(4827, 372)
+position = Vector2(4562, 391)
 
 [node name="solfrances9" parent="." instance=ExtResource("2_ipkxi")]
-position = Vector2(5239, 336)
+position = Vector2(4845, 390)
+
+[node name="solfrances10" parent="." instance=ExtResource("2_ipkxi")]
+position = Vector2(4845, 390)
+
+[node name="solfrances11" parent="." instance=ExtResource("2_ipkxi")]
+position = Vector2(5371, 379)
+
+[node name="solfrances12" parent="." instance=ExtResource("2_ipkxi")]
+position = Vector2(5857, 371)
 
 [node name="solfracesbruto" parent="." instance=ExtResource("4_u3fq6")]
 position = Vector2(1435, 347)
 
 [node name="solfracesbruto2" parent="." instance=ExtResource("4_u3fq6")]
-position = Vector2(5953, 347)
+position = Vector2(5035, 381)
+
+[node name="solfracesbruto4" parent="." instance=ExtResource("4_u3fq6")]
+position = Vector2(6109, 368)
 
 [node name="solfracesbruto3" parent="." instance=ExtResource("4_u3fq6")]
 position = Vector2(3333, 347)
@@ -83,10 +96,22 @@ position = Vector2(138, 161)
 [node name="hud" type="CanvasLayer" parent="."]
 
 [node name="porta" type="Area2D" parent="."]
-position = Vector2(6120, 456)
+z_index = -1
+position = Vector2(6251, 449)
+
+[node name="ColorRect" type="ColorRect" parent="porta"]
+offset_left = -12.0
+offset_top = 1.0
+offset_right = 128.0
+offset_bottom = 41.0
+color = Color(0.529412, 0.627451, 0.678431, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="porta"]
+position = Vector2(3, 6)
+texture = ExtResource("8_cmos6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta"]
-position = Vector2(68, -28)
+position = Vector2(34, -10)
 shape = SubResource("RectangleShape2D_86fk6")
 
-[connection signal="area_shape_entered" from="porta" to="." method="_on_porta_area_shape_entered"]
+[connection signal="body_entered" from="porta" to="." method="_on_porta_body_entered"]

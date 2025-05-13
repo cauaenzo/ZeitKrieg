@@ -1,20 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckbcn3lsny3ge"]
+[gd_scene load_steps=4 format=3 uid="uid://ckbcn3lsny3ge"]
 
 [ext_resource type="Script" path="res://script/caixademunicao.gd" id="1_rh4n2"]
+[ext_resource type="Texture2D" uid="uid://b6r88fbu8dihk" path="res://assets/caixademunicao.png" id="2_x6uks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8akr"]
-size = Vector2(39, 32)
+size = Vector2(43, 32)
 
 [node name="caixademunicao" type="Area2D"]
+z_index = -1
 script = ExtResource("1_rh4n2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 35.0
-offset_bottom = 31.0
-color = Color(0.392157, 0.772549, 0.760784, 1)
+[node name="Caixademunicao" type="Sprite2D" parent="."]
+position = Vector2(19, 19)
+texture = ExtResource("2_x6uks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16.5, 15)
+position = Vector2(18.5, 15)
 shape = SubResource("RectangleShape2D_q8akr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

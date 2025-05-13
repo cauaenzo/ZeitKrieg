@@ -15,5 +15,6 @@ func _process(delta: float) -> void:
 
 
 
-func _on_porta_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	get_tree().change_scene_to_file("res://scenes/transisaofass_1a_2.tscn")
+func _on_porta_body_entered(body: Node2D) -> void:
+	if body.is_in_group("protagonista"):
+		get_tree().change_scene_to_file("res://scenes/transisaofass_1a_2.tscn")

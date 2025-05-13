@@ -1,14 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://coftt7amktf3i"]
+[gd_scene load_steps=10 format=3 uid="uid://coftt7amktf3i"]
 
 [ext_resource type="Script" path="res://script/menudeentrar.gd" id="1_ma14x"]
+[ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="2_8johp"]
+[ext_resource type="Texture2D" uid="uid://dw5vvvll1ctt7" path="res://assets/relogio.png" id="2_eqhpj"]
 [ext_resource type="Texture2D" uid="uid://cm8gup5gqhggj" path="res://assets/zeitkrieg.png" id="2_julrw"]
+[ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="3_b752p"]
 
 [sub_resource type="Animation" id="Animation_wx126"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/ButaoInicio:modulate")
+tracks/0/path = NodePath("ButaoInicio:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,7 +29,7 @@ resource_name = "butinisai"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/ButaoInicio:modulate")
+tracks/0/path = NodePath("ButaoInicio:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -52,38 +55,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ma14x")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -99.0
-offset_top = -79.0
-offset_right = 100.0
-offset_bottom = 125.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="ButaoInicio" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Jogar"
-
-[node name="ButaoControles" type="Button" parent="VBoxContainer"]
-modulate = Color(1, 1, 1, 0.784314)
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Controles"
-
-[node name="ButaoSair" type="Button" parent="VBoxContainer"]
-modulate = Color(1, 1, 1, 0.784314)
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Sair"
+[node name="Relogio" type="Sprite2D" parent="."]
+position = Vector2(576, 294)
+scale = Vector2(4.7395, 4.76625)
+texture = ExtResource("2_eqhpj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -91,16 +66,48 @@ libraries = {
 }
 
 [node name="Zeitkrieg" type="Sprite2D" parent="."]
-position = Vector2(572, 121)
-scale = Vector2(2, 2)
+texture_filter = 1
+position = Vector2(578, 305)
+scale = Vector2(3.148, 3.41)
 texture = ExtResource("2_julrw")
 
-[connection signal="mouse_entered" from="VBoxContainer/ButaoInicio" to="." method="_on_butao_inicio_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/ButaoInicio" to="." method="_on_butao_inicio_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/ButaoInicio" to="." method="_on_butao_inicio_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/ButaoControles" to="." method="_on_butao_controles_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/ButaoControles" to="." method="_on_butao_controles_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/ButaoControles" to="." method="_on_butao_controles_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/ButaoSair" to="." method="_on_butao_sair_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/ButaoSair" to="." method="_on_butao_sair_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/ButaoSair" to="." method="_on_butao_sair_pressed"]
+[node name="ButaoSair" type="Button" parent="."]
+layout_mode = 2
+offset_left = 971.0
+offset_top = 428.0
+offset_right = 1099.0
+offset_bottom = 487.0
+theme_override_fonts/font = ExtResource("2_8johp")
+theme_override_font_sizes/font_size = 50
+text = "Sair"
+
+[node name="ButaoInicio" type="Button" parent="."]
+layout_mode = 2
+offset_left = 48.0
+offset_top = 432.0
+offset_right = 225.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("2_8johp")
+theme_override_font_sizes/font_size = 50
+text = "Jogar"
+
+[node name="ButaoControles" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 424.0
+offset_top = 528.0
+offset_right = 742.0
+offset_bottom = 587.0
+theme_override_fonts/font = ExtResource("3_b752p")
+theme_override_font_sizes/font_size = 50
+text = "Controles"
+
+[connection signal="mouse_entered" from="ButaoSair" to="." method="_on_butao_sair_mouse_entered"]
+[connection signal="mouse_exited" from="ButaoSair" to="." method="_on_butao_sair_mouse_exited"]
+[connection signal="pressed" from="ButaoSair" to="." method="_on_butao_sair_pressed"]
+[connection signal="mouse_entered" from="ButaoInicio" to="." method="_on_butao_inicio_mouse_entered"]
+[connection signal="mouse_exited" from="ButaoInicio" to="." method="_on_butao_inicio_mouse_exited"]
+[connection signal="pressed" from="ButaoInicio" to="." method="_on_butao_inicio_pressed"]
+[connection signal="mouse_entered" from="ButaoControles" to="." method="_on_butao_controles_mouse_entered"]
+[connection signal="mouse_exited" from="ButaoControles" to="." method="_on_butao_controles_mouse_exited"]
+[connection signal="pressed" from="ButaoControles" to="." method="_on_butao_controles_pressed"]

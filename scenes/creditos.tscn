@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfogh4j2grjvb"]
+
+[ext_resource type="Script" path="res://script/creditos.gd" id="1_4n10s"]
+[ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="1_6rei3"]
+
+[node name="creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4n10s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="tbag" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 296.0
+offset_top = 72.0
+offset_right = 869.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_6rei3")
+theme_override_font_sizes/font_size = 50
+text = "The Boys and a Girl"
+
+[node name="integrantes" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 440.0
+offset_top = 176.0
+offset_right = 709.0
+offset_bottom = 212.0
+theme_override_fonts/font = ExtResource("1_6rei3")
+theme_override_font_sizes/font_size = 35
+text = "Integrantes:"
+
+[node name="nomes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 256.0
+offset_right = 690.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("1_6rei3")
+theme_override_font_sizes/font_size = 19
+text = "Emanuel Pimenta
+
+Miguel rocha 
+
+Nathanael Honorato
+
+Cauã Enzo
+
+Laura Sophia
+
+Tiago Calixto
+
+Luiz Miguel"
+horizontal_alignment = 1
+
+[node name="voltar" type="Button" parent="."]
+layout_mode = 0
+offset_top = 624.0
+offset_right = 72.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_6rei3")
+text = "voltar"
+flat = true
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1746819535
+::res://::1747159092
 icon.svg::CompressedTexture2D::545105506425612832::1742576850::1743526474::1::::<><>::
 Teste.tscn::PackedScene::7511306027019438619::1746208624::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn
 ::res://addons/::1746722772
@@ -76,13 +76,15 @@ rewinder.tscn::PackedScene::4771329315503685839::1746208624::0::1::::<><>::
 rewind_property.gd::GDScript::-1::1746208321::0::1::::RewindResource<>Resource<>::
 TimeRewinder.gd::GDScript::-1::1746208321::0::1::::<>EditorPlugin<>::
 TimeRewinder.png::CompressedTexture2D::3912959293574215312::1743699472::1743699473::1::::<><>::
-::res://assets/::1746819507
+::res://assets/::1747159092
 AGACHADOANDANDO.png::CompressedTexture2D::5307956381603247234::1746817657::1746817809::1::::<><>::
 AGACHANDO.png::CompressedTexture2D::3076272913409264476::1746817657::1746817809::1::::<><>::
 alemaoagachadoandando.png::CompressedTexture2D::8114726649431548201::1744399974::1744399980::1::::<><>::
 alemaoagachadoparado.png::CompressedTexture2D::6743479704601750264::1744399974::1744399980::1::::<><>::
+bala.png::CompressedTexture2D::834426720804483954::1747158939::1747159072::1::::<><>::
 bunkerfechado.png::CompressedTexture2D::4841227263076176920::1746819507::1746819536::1::::<><>::
 bunkrfechad1.png::CompressedTexture2D::8449932331925277959::1746819507::1746819536::1::::<><>::
+caixademunicao.png::CompressedTexture2D::4599432115365766144::1747158939::1747159093::1::::<><>::
 Cape.png::CompressedTexture2D::5055495361584534725::1743528548::1743528561::1::::<><>::
 frances2parado.png::CompressedTexture2D::1493669502119457165::1744742415::1744742425::1::::<><>::
 frances3parado.png::CompressedTexture2D::499637251411105813::1744742415::1744742425::1::::<><>::
@@ -103,6 +105,16 @@ tileCORRETCTEST.png::CompressedTexture2D::874187007722895206::1746212731::174621
 zeitkrieg.png::CompressedTexture2D::5683632809249920869::1746819507::1746819536::1::::<><>::
 zeittile.png::CompressedTexture2D::7454731154733006962::1746211937::1746211951::1::::<><>::
 ::res://assets/enemy/::1742577304
+::res://assets/fontes/::1747154644
+::res://assets/fontes/iceland_winterstorm/::1747154484
+IcelandWinterstorm_PERSONAL_USE_ONLY.otf::FontFile::7766843888178232410::1731885524::1747154484::1::::<><>::
+READ_BEFORE_ANY_USE.txt::TextFile::-1::1732154564::0::1::::<><>::
+::res://assets/fontes/iceland_winterstorm/img/::1747154484
+iceland-winterstorm_poster01.png::CompressedTexture2D::8295796815358756259::1732127058::1747154484::1::::<><>::
+::res://assets/fontes/the_last_shuriken/::1747154648
+Readme.txt::TextFile::-1::1613031460::0::1::::<><>::
+The Last Shuriken.otf::FontFile::2988632846506031191::1647612160::1747154648::1::::<><>::
+The Last Shuriken.ttf::FontFile::3252800093559257857::1647612164::1747154648::1::::<><>::
 ::res://assets/simpleassets/::1746722345
 barracheia.png::CompressedTexture2D::2980036681972308005::1746576730::1746722344::1::::<><>::
 barravazia.png::CompressedTexture2D::3555885837431692316::1746576660::1746722345::1::::<><>::
@@ -126,28 +138,32 @@ Grito 1.ogg::AudioStreamOggVorbis::381994884821580386::1744399604::1746726701::1
 grito 2.ogg::AudioStreamOggVorbis::612527729541018679::1746574246::1746726701::1::::<><>::
 RecMissil.ogg::AudioStreamOggVorbis::9206380566208798221::1744399604::1746726701::1::::<><>::
 Tiroteio.ogg::AudioStreamOggVorbis::1009850096579634205::1744399604::1746726701::1::::<><>::
-::res://chracter/::1746818645
-protagonista.tscn::PackedScene::6075254176564584709::1746818645::0::1::::<><>::res://script/protagonista.gd<>uid://buvsoktmryxka::::res://scenes/tiro.tscn<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>uid://chvhjbu5335bi::::res://assets/AGACHADOANDANDO.png<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
-protagotemp.tscn::PackedScene::4389412579973920458::1746818645::0::1::::<><>::res://script/protagotemp.gd<>res://addons/Time Rewinder/rewinder.gd<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>res://addons/Time Rewinder/rewind_property.gd<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>res://addons/post_processing/node/post_process.gd<>res://addons/post_processing/resource/post_processing_configuration.gd<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
+::res://chracter/::1747158815
+protagonista.tscn::PackedScene::6075254176564584709::1747158815::0::1::::<><>::res://script/protagonista.gd<>uid://buvsoktmryxka::::res://scenes/tiro.tscn<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>uid://chvhjbu5335bi::::res://assets/AGACHADOANDANDO.png<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
+protagotemp.tscn::PackedScene::4389412579973920458::1747158815::0::1::::<><>::res://script/protagotemp.gd<>res://addons/Time Rewinder/rewinder.gd<>uid://dnu3mk4nvthyv::::res://assets/alemaoagachadoandando.png<>uid://c5uqj4r61yptd::::res://assets/pixilart-sprite.png<>res://addons/Time Rewinder/rewind_property.gd<>uid://bhj51084v861u::::res://assets/sprite-alemao.png<>res://addons/post_processing/node/post_process.gd<>res://addons/post_processing/resource/post_processing_configuration.gd<>uid://bqwq6j1ms26qi::::res://assets/simpleassets/barravazia.png<>uid://bips1exqbnj3r::::res://assets/simpleassets/barracheia.png
 solfracesbruto.tscn::PackedScene::8977385651680019047::1745955769::0::1::::<><>::res://script/solfracesbruto.gd
 solfrances.tscn::PackedScene::65231441932064694::1746818062::0::1::::<><>::res://script/solfrances.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://c2w3f1y16jne0::::res://scenes/tiroinimi.tscn<>uid://vjsrvma48cmv::::res://assets/frances2parado.png<>uid://co0y61ekney3j::::res://assets/francesandando2.png<>uid://bnu2aat1rqcr0::::res://assets/frances4parado.png<>uid://f2cuaf7dw5w2::::res://assets/francesandando4.png<>uid://hea7nel51kr2::::res://assets/frances3parado.png<>uid://btigysm0k2e12::::res://assets/francesandando3.png<>uid://dikhnkh26k47a::::res://assets/francesparado1.png<>uid://cxus76uaks2fq::::res://assets/francesandando1.png
 solmutad.tscn::PackedScene::8583466732083340952::1746208624::0::1::::<><>::res://script/solmutad.gd<>uid://ckbcn3lsny3ge::::res://scenes/caixademunicao.tscn<>uid://buvsoktmryxka::::res://scenes/tiro.tscn
-::res://scenes/::1746818865
-caixademunicao.tscn::PackedScene::5476940319309720784::1746818645::0::1::::<><>::res://script/caixademunicao.gd
-controlesdojogo.tscn::PackedScene::7736706151934869703::1746807826::0::1::::<><>::res://script/control_2.gd
-fase_1.tscn::PackedScene::1317503209823604423::1746818865::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn<>res://script/fase_1.gd<>uid://mppy5sgxbu4e::::res://assets/tileCORRETCTEST.png<>uid://6ul8jrqi6es::::res://chracter/solfrances.tscn<>uid://d05yh27x1k6a2::::res://chracter/solfracesbruto.tscn<>uid://bcayffmpvofhd::::res://assets/songs/musics/Fase 1.2.ogg<>uid://dnuyb6cntsymc::::res://scenes/paraaxayer.tscn
-fase_2.tscn::PackedScene::4320671731820334405::1746818645::0::1::::<><>::
-fase_3.tscn::PackedScene::3348781582477940173::1746818645::0::1::::<><>::uid://b3si8pm36ie1w::::res://chracter/protagotemp.tscn<>res://addons/Time Rewinder/rewinder.gd<>uid://duj5pcel4u7jw::::res://chracter/solmutad.tscn
-menudeentr.tscn::PackedScene::5766996301342256780::1746810412::0::1::::<><>::res://script/menudeentrar.gd
+::res://scenes/::1747158861
+caixademunicao.tscn::PackedScene::5476940319309720784::1747155327::0::1::::<><>::res://script/caixademunicao.gd
+controlesdojogo.tscn::PackedScene::7736706151934869703::1747158815::0::1::::<><>::res://script/control_2.gd<>uid://bmlxe3q812lb2::::res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf
+creditos.tscn::PackedScene::2766644531269880567::1747158815::0::1::::<><>::res://script/creditos.gd<>uid://bityl1mo56v00::::res://assets/fontes/the_last_shuriken/The Last Shuriken.otf
+fase_1.tscn::PackedScene::1317503209823604423::1747158815::0::1::::<><>::uid://css5swjn42ufd::::res://chracter/protagonista.tscn<>res://script/fase_1.gd<>uid://mppy5sgxbu4e::::res://assets/tileCORRETCTEST.png<>uid://6ul8jrqi6es::::res://chracter/solfrances.tscn<>uid://d05yh27x1k6a2::::res://chracter/solfracesbruto.tscn<>uid://bcayffmpvofhd::::res://assets/songs/musics/Fase 1.2.ogg<>uid://dnuyb6cntsymc::::res://scenes/paraaxayer.tscn
+fase_2.tscn::PackedScene::4320671731820334405::1747158815::0::1::::<><>::
+fase_3.tscn::PackedScene::3348781582477940173::1747158815::0::1::::<><>::uid://b3si8pm36ie1w::::res://chracter/protagotemp.tscn<>res://addons/Time Rewinder/rewinder.gd<>uid://duj5pcel4u7jw::::res://chracter/solmutad.tscn
+introducaogame.tscn::PackedScene::3997634800274804::1747158861::0::1::::<><>::res://script/introducaogame.gd<>uid://cm8gup5gqhggj::::res://assets/zeitkrieg.png<>uid://bmlxe3q812lb2::::res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf
+menudeentr.tscn::PackedScene::5766996301342256780::1747158815::0::1::::<><>::res://script/menudeentrar.gd<>uid://bityl1mo56v00::::res://assets/fontes/the_last_shuriken/The Last Shuriken.otf<>uid://dw5vvvll1ctt7::::res://assets/relogio.png<>uid://cm8gup5gqhggj::::res://assets/zeitkrieg.png<>uid://bmlxe3q812lb2::::res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf
 paraaxayer.tscn::PackedScene::8114465199005469530::1746818062::0::1::::<><>::uid://djod6j42c22x4::::res://assets/fundo.png<>uid://db38vi6nlkgbs::::res://assets/layer3.png<>uid://by227ena22j7q::::res://assets/layer2.png<>uid://2nirl34isqvn::::res://assets/layer1.png
-tiro.tscn::PackedScene::3834667951427167296::1746818646::0::1::::<><>::res://script/tiro.gd
+tiro.tscn::PackedScene::3834667951427167296::1747155327::0::1::::<><>::res://script/tiro.gd
 tiroinimi.tscn::PackedScene::6715066864874903117::1746208624::0::1::::<><>::res://script/tiroinimi.gd
-transisaofass_1a_2.tscn::PackedScene::4701670935669541121::1746818645::0::1::::<><>::
-::res://script/::1746819411
+transisaofass_1a_2.tscn::PackedScene::4701670935669541121::1747158815::0::1::::<><>::
+::res://script/::1747158861
 attsoesq.gd::GDScript::-1::1744399661::0::1::::<>Area2D<>::
 caixademunicao.gd::GDScript::-1::1746819411::0::1::::<>Area2D<>::
-control_2.gd::GDScript::-1::1744736123::0::1::::<>Control<>::
+control_2.gd::GDScript::-1::1747155264::0::1::::<>Control<>::
+creditos.gd::GDScript::-1::1747157143::0::1::::<>Control<>::
 fase_1.gd::GDScript::-1::1746812281::0::1::::<>Node2D<>::
+introducaogame.gd::GDScript::-1::1747158861::0::1::::<>Node<>::
 menudeentrar.gd::GDScript::-1::1744742687::0::1::::<>Control<>::
 protagonista.gd::GDScript::-1::1746818062::0::1::::<>CharacterBody2D<>::
 protagotemp.gd::GDScript::-1::1746810984::0::1::::<>CharacterBody2D<>::
