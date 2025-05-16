@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 
 
 func _on_porta_body_entered(body: Node2D) -> void:
-	if body.is_in_group("protagonista"):
+	if body.is_in_group("protagonista") && $porta.explodiu:
 		get_tree().change_scene_to_file("res://scenes/transisaofass_1a_2.tscn")

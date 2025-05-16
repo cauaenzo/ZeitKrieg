@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://6w1racalmwvk"]
+
+[ext_resource type="Texture2D" uid="uid://bf7ivim30ha5g" path="res://assets/bomba.png" id="1_1qusq"]
+[ext_resource type="Script" path="res://scenes/granada_prop.gd" id="1_y0bf5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iamk7"]
+radius = 53.0094
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bk0oe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1qusq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="granada_prop" type="Area2D"]
+script = ExtResource("1_y0bf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iamk7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bk0oe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

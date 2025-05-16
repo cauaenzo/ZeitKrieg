@@ -1,25 +1,33 @@
 extends CharacterBody2D
 
 
-var velocidade = 250
+var velocidade = 1050
 const JUMP_VELOCITY = -200.0
 var grav = 10
 var lado = 1
-var vida1 = 100
+var vida1 = 10000000
 var countdown = 1
 var correndo = 0
-var municao = 6
+var municao = 600
 var caixademuni = 0
 var abaixado = 0
+var pegou_granada = false
 @export var tiro:PackedScene
 #@export var hit:PackedScene
 #@export var hit2:PackedScene
-
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	
+	#Logica de visualizar granada no jogador
+	print(pegou_granada)
+	if pegou_granada:
+		$Bomba.visible = true
+	else:
+		$Bomba.visible = false
+		
 	if not is_on_floor():
 		velocity.y += grav
 
@@ -75,21 +83,27 @@ func _physics_process(delta: float) -> void:
 		if municao == 0:
 			municao += 6
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		if municao == 1:
 			municao += 5
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		if municao == 2:
 			municao += 4
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		if municao == 3:
 			municao += 3
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		if municao == 4:
 			municao += 2
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		if municao == 5:
 			municao += 1
 			caixademuni -= 1
+			$CanvasLayer/nummuni.text = str(municao)
 		else:
 			municao += 0
 		
@@ -126,7 +140,7 @@ func danolev():
 	vida1 -= 25
 	$CanvasLayer/vida.value = vida1
 	if vida1 == 0:
-		queue_free()
+		get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")
 
 func danolam():
-	queue_free()
+	get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")

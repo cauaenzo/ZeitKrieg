@@ -3,7 +3,7 @@ extends Control
 
 
 func _ready() -> void:
-	pass 
+	pass
 
 
 
@@ -20,7 +20,7 @@ func _on_butao_controles_pressed() -> void:
 # mouse entrar
 
 func _on_butao_inicio_mouse_entered() -> void:
-	$AnimationPlayer.play("butinienc")
+	pass
 
 
 func _on_butao_controles_mouse_entered() -> void:
@@ -33,7 +33,7 @@ func _on_butao_sair_mouse_entered() -> void:
 # mouse sair 
 
 func _on_butao_inicio_mouse_exited() -> void:
-	$AnimationPlayer.play("butinisai")
+	pass
 
 
 func _on_butao_controles_mouse_exited() -> void:

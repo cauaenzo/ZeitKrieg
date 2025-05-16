@@ -1,17 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://coftt7amktf3i"]
+[gd_scene load_steps=15 format=3 uid="uid://coftt7amktf3i"]
 
 [ext_resource type="Script" path="res://script/menudeentrar.gd" id="1_ma14x"]
 [ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="2_8johp"]
 [ext_resource type="Texture2D" uid="uid://dw5vvvll1ctt7" path="res://assets/relogio.png" id="2_eqhpj"]
 [ext_resource type="Texture2D" uid="uid://cm8gup5gqhggj" path="res://assets/zeitkrieg.png" id="2_julrw"]
+[ext_resource type="PackedScene" uid="uid://c7nu0j7hga8qo" path="res://scenes/camera.tscn" id="2_tmfur"]
 [ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="3_b752p"]
+[ext_resource type="Texture2D" uid="uid://djod6j42c22x4" path="res://assets/fundo.png" id="7_3plju"]
+[ext_resource type="Texture2D" uid="uid://2nirl34isqvn" path="res://assets/layer1.png" id="7_og5d5"]
+[ext_resource type="Texture2D" uid="uid://db38vi6nlkgbs" path="res://assets/layer3.png" id="8_a4i42"]
+[ext_resource type="Texture2D" uid="uid://by227ena22j7q" path="res://assets/layer2.png" id="9_0vkka"]
 
 [sub_resource type="Animation" id="Animation_wx126"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ButaoInicio:modulate")
+tracks/0/path = NodePath("CanvasLayer/ButaoInicio:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +34,7 @@ resource_name = "butinisai"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ButaoInicio:modulate")
+tracks/0/path = NodePath("CanvasLayer/ButaoInicio:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -55,24 +60,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ma14x")
 
-[node name="Relogio" type="Sprite2D" parent="."]
+[node name="camera" parent="." instance=ExtResource("2_tmfur")]
+position = Vector2(0, 8)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1160.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.392157)
+
+[node name="Relogio" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(576, 294)
 scale = Vector2(4.7395, 4.76625)
 texture = ExtResource("2_eqhpj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ydoek")
-}
-
-[node name="Zeitkrieg" type="Sprite2D" parent="."]
+[node name="Zeitkrieg" type="Sprite2D" parent="CanvasLayer"]
 texture_filter = 1
 position = Vector2(578, 305)
 scale = Vector2(3.148, 3.41)
 texture = ExtResource("2_julrw")
 
-[node name="ButaoSair" type="Button" parent="."]
-layout_mode = 2
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_ydoek")
+}
+
+[node name="ButaoSair" type="Button" parent="CanvasLayer"]
 offset_left = 971.0
 offset_top = 428.0
 offset_right = 1099.0
@@ -80,9 +95,9 @@ offset_bottom = 487.0
 theme_override_fonts/font = ExtResource("2_8johp")
 theme_override_font_sizes/font_size = 50
 text = "Sair"
+flat = true
 
-[node name="ButaoInicio" type="Button" parent="."]
-layout_mode = 2
+[node name="ButaoInicio" type="Button" parent="CanvasLayer"]
 offset_left = 48.0
 offset_top = 432.0
 offset_right = 225.0
@@ -90,10 +105,10 @@ offset_bottom = 491.0
 theme_override_fonts/font = ExtResource("2_8johp")
 theme_override_font_sizes/font_size = 50
 text = "Jogar"
+flat = true
 
-[node name="ButaoControles" type="Button" parent="."]
+[node name="ButaoControles" type="Button" parent="CanvasLayer"]
 texture_filter = 1
-layout_mode = 2
 offset_left = 424.0
 offset_top = 528.0
 offset_right = 742.0
@@ -101,13 +116,48 @@ offset_bottom = 587.0
 theme_override_fonts/font = ExtResource("3_b752p")
 theme_override_font_sizes/font_size = 50
 text = "Controles"
+flat = true
 
-[connection signal="mouse_entered" from="ButaoSair" to="." method="_on_butao_sair_mouse_entered"]
-[connection signal="mouse_exited" from="ButaoSair" to="." method="_on_butao_sair_mouse_exited"]
-[connection signal="pressed" from="ButaoSair" to="." method="_on_butao_sair_pressed"]
-[connection signal="mouse_entered" from="ButaoInicio" to="." method="_on_butao_inicio_mouse_entered"]
-[connection signal="mouse_exited" from="ButaoInicio" to="." method="_on_butao_inicio_mouse_exited"]
-[connection signal="pressed" from="ButaoInicio" to="." method="_on_butao_inicio_pressed"]
-[connection signal="mouse_entered" from="ButaoControles" to="." method="_on_butao_controles_mouse_entered"]
-[connection signal="mouse_exited" from="ButaoControles" to="." method="_on_butao_controles_mouse_exited"]
-[connection signal="pressed" from="ButaoControles" to="." method="_on_butao_controles_pressed"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2600, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2800, 327)
+scale = Vector2(7, 6.54)
+texture = ExtResource("7_3plju")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(2800, 339)
+scale = Vector2(7, 6.46)
+texture = ExtResource("8_a4i42")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(2800, 327)
+scale = Vector2(7, 6.54)
+texture = ExtResource("9_0vkka")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2600, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(2000, 400)
+scale = Vector2(5, 5)
+texture = ExtResource("7_og5d5")
+
+[connection signal="mouse_entered" from="CanvasLayer/ButaoSair" to="." method="_on_butao_sair_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButaoSair" to="." method="_on_butao_sair_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/ButaoSair" to="." method="_on_butao_sair_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/ButaoInicio" to="." method="_on_butao_inicio_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButaoInicio" to="." method="_on_butao_inicio_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/ButaoInicio" to="." method="_on_butao_inicio_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/ButaoControles" to="." method="_on_butao_controles_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButaoControles" to="." method="_on_butao_controles_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/ButaoControles" to="." method="_on_butao_controles_pressed"]

@@ -8,13 +8,17 @@ var velocidade = -300
 var vida = 100
 var avanco = 0
 
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
 	if avanco == 1:
 		velocity.x = velocidade
+		$sprbruto.play("walk")
+		
+	if avanco == 0:
+		$sprbruto.play("idle")
+		
 	
 	move_and_slide()
 
