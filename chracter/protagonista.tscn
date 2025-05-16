@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://buvsoktmryxka" path="res://scenes/tiro.tscn" id="2_4ngje"]
 [ext_resource type="Texture2D" uid="uid://bhj51084v861u" path="res://assets/sprite-alemao.png" id="3_gxx80"]
 [ext_resource type="Texture2D" uid="uid://c5uqj4r61yptd" path="res://assets/pixilart-sprite.png" id="3_kt1ly"]
-[ext_resource type="Texture2D" uid="uid://chvhjbu5335bi" path="res://assets/AGACHADOANDANDO.png" id="3_vane3"]
-[ext_resource type="Texture2D" uid="uid://bqwq6j1ms26qi" path="res://assets/simpleassets/barravazia.png" id="7_gym1m"]
-[ext_resource type="Texture2D" uid="uid://bips1exqbnj3r" path="res://assets/simpleassets/barracheia.png" id="8_6hw1v"]
-[ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="8_mm3vm"]
-[ext_resource type="Texture2D" uid="uid://bf7ivim30ha5g" path="res://assets/bomba.png" id="9_k5dpf"]
+[ext_resource type="Texture2D" uid="uid://pmtflc2pt3aa" path="res://assets/AGACHADOANDANDO.png" id="3_vane3"]
+[ext_resource type="Texture2D" uid="uid://26gtdvf7t2ql" path="res://assets/simpleassets/barravazia.png" id="7_gym1m"]
+[ext_resource type="Texture2D" uid="uid://datmt02otmwig" path="res://assets/simpleassets/barracheia.png" id="8_6hw1v"]
+[ext_resource type="FontFile" uid="uid://7jtay2paq61q" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="8_mm3vm"]
+[ext_resource type="Texture2D" uid="uid://b574sdkunb706" path="res://assets/bomba.png" id="9_k5dpf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmcgg"]
 atlas = ExtResource("3_vane3")
@@ -245,8 +245,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bomba" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(17, 53)
-rotation = 0.427606
-scale = Vector2(0.25, 0.25)
+position = Vector2(12, 60)
+rotation = 1.14494
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_k5dpf")

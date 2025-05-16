@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="1_5qngd"]
 [ext_resource type="Script" path="res://script/fase_1.gd" id="1_u254h"]
-[ext_resource type="Texture2D" uid="uid://mppy5sgxbu4e" path="res://assets/tileCORRETCTEST.png" id="2_8bx60"]
+[ext_resource type="Texture2D" uid="uid://c30jg7i78da3k" path="res://assets/tileCORRETCTEST.png" id="2_8bx60"]
 [ext_resource type="PackedScene" uid="uid://6ul8jrqi6es" path="res://chracter/solfrances.tscn" id="2_ipkxi"]
 [ext_resource type="PackedScene" uid="uid://d05yh27x1k6a2" path="res://chracter/solfracesbruto.tscn" id="4_u3fq6"]
 [ext_resource type="AudioStream" uid="uid://bcayffmpvofhd" path="res://assets/songs/musics/Fase 1.2.ogg" id="6_mwx3p"]
 [ext_resource type="PackedScene" uid="uid://dnuyb6cntsymc" path="res://scenes/paraaxayer.tscn" id="7_isu1l"]
-[ext_resource type="Texture2D" uid="uid://dsnhfergjairv" path="res://assets/bunkrfechad1.png" id="8_cmos6"]
+[ext_resource type="Texture2D" uid="uid://c4gonedhjnmed" path="res://assets/bunkrfechad1.png" id="8_cmos6"]
 [ext_resource type="Script" path="res://scenes/porta.gd" id="8_nusmy"]
 [ext_resource type="PackedScene" uid="uid://6w1racalmwvk" path="res://scenes/granada_prop.tscn" id="9_xsd61"]
-[ext_resource type="Texture2D" uid="uid://ca8eknnwhya8g" path="res://assets/bunkerfechado.png" id="10_k842k"]
-[ext_resource type="Texture2D" uid="uid://bf7ivim30ha5g" path="res://assets/bomba.png" id="10_pls2c"]
+[ext_resource type="Texture2D" uid="uid://ifgkkmv23bex" path="res://assets/bunkerfechado.png" id="10_k842k"]
+[ext_resource type="Texture2D" uid="uid://b574sdkunb706" path="res://assets/bomba.png" id="10_pls2c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6d6l"]
 texture = ExtResource("2_8bx60")

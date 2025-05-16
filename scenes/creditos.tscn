@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfogh4j2grjvb"]
 
 [ext_resource type="Script" path="res://script/creditos.gd" id="1_4n10s"]
-[ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="1_6rei3"]
-[ext_resource type="Texture2D" uid="uid://dw5vvvll1ctt7" path="res://assets/relogio.png" id="2_4mn8r"]
+[ext_resource type="FontFile" uid="uid://6f0vjq72qjdw" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="1_6rei3"]
+[ext_resource type="Texture2D" uid="uid://bxesomed31avx" path="res://assets/relogio.png" id="2_4mn8r"]
 [ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="4_7fsmw"]
 [ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="5_3ejtt"]
 

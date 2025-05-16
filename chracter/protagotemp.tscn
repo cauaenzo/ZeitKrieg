@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://script/protagotemp.gd" id="1_qo61a"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="2_j8ym0"]
-[ext_resource type="Texture2D" uid="uid://dnu3mk4nvthyv" path="res://assets/alemaoagachadoandando.png" id="2_v47lt"]
+[ext_resource type="Texture2D" uid="uid://b8igmn5bikgmd" path="res://assets/alemaoagachadoandando.png" id="2_v47lt"]
 [ext_resource type="Texture2D" uid="uid://c5uqj4r61yptd" path="res://assets/pixilart-sprite.png" id="3_jh53d"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewind_property.gd" id="3_wkc2x"]
 [ext_resource type="Texture2D" uid="uid://bhj51084v861u" path="res://assets/sprite-alemao.png" id="4_a01xo"]
 [ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="7_evwiv"]
 [ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="8_rgmm3"]
-[ext_resource type="Texture2D" uid="uid://bqwq6j1ms26qi" path="res://assets/simpleassets/barravazia.png" id="9_yvcii"]
-[ext_resource type="Texture2D" uid="uid://bips1exqbnj3r" path="res://assets/simpleassets/barracheia.png" id="10_lbcy1"]
+[ext_resource type="Texture2D" uid="uid://26gtdvf7t2ql" path="res://assets/simpleassets/barravazia.png" id="9_yvcii"]
+[ext_resource type="Texture2D" uid="uid://datmt02otmwig" path="res://assets/simpleassets/barracheia.png" id="10_lbcy1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nycgb"]
 atlas = ExtResource("2_v47lt")

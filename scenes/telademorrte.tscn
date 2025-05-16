@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1g3y4vi4701m"]
 
 [ext_resource type="Script" path="res://script/telademorrte.gd" id="1_bjqnv"]
-[ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="2_k5dhj"]
+[ext_resource type="FontFile" uid="uid://6f0vjq72qjdw" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="2_k5dhj"]
 [ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="3_me4nh"]
 [ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="4_q7yqm"]
-[ext_resource type="Texture2D" uid="uid://dw5vvvll1ctt7" path="res://assets/relogio.png" id="5_sytll"]
+[ext_resource type="Texture2D" uid="uid://bxesomed31avx" path="res://assets/relogio.png" id="5_sytll"]
 
 [sub_resource type="Resource" id="Resource_4ima8"]
 script = ExtResource("4_q7yqm")
