@@ -15,8 +15,9 @@ position = Vector2(21.5, 20)
 shape = SubResource("RectangleShape2D_wao82")
 
 [node name="Bala" type="Sprite2D" parent="."]
-position = Vector2(17, 23)
+position = Vector2(20, 20)
 rotation = 1.5708
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_p34s3")
 
 [node name="destruidor" type="Timer" parent="."]

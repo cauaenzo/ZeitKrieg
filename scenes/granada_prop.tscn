@@ -24,6 +24,7 @@ script = ExtResource("1_y0bf5")
 shape = SubResource("CircleShape2D_iamk7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.782143
 sprite_frames = SubResource("SpriteFrames_bk0oe")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

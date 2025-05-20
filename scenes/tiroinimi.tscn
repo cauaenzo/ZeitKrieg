@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2w3f1y16jne0"]
 
 [ext_resource type="Script" path="res://script/tiroinimi.gd" id="1_rp5rv"]
-[ext_resource type="Texture2D" uid="uid://l5g5eoo0k0di" path="res://assets/bala.png" id="2_mw32b"]
+[ext_resource type="Texture2D" uid="uid://cfa76jqgvlj10" path="res://assets/balaaa.png" id="2_y2gpo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3outa"]
 size = Vector2(25, 24)
@@ -17,8 +17,8 @@ shape = SubResource("RectangleShape2D_3outa")
 [node name="Bala" type="Sprite2D" parent="."]
 position = Vector2(14, 14)
 rotation = 1.5708
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_mw32b")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_y2gpo")
 flip_v = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

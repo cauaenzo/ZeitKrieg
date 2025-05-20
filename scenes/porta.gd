@@ -15,9 +15,12 @@ func _process(delta: float) -> void:
 		if jogador && jogador.position.x < position.x - 600:
 			explodiu = true
 			$AnimatedSprite2D.play("aberto")
+			$explosaoportas.play()
 			tem_granada = false
+
 	else:
 		$Bomba.visible = false
+
 
 
 func _on_body_entered(body: Node2D) -> void:

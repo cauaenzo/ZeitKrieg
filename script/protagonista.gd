@@ -1,18 +1,19 @@
 extends CharacterBody2D
 
 
-var velocidade = 1050
+var velocidade = 250
 const JUMP_VELOCITY = -200.0
 var grav = 10
 var lado = 1
-var vida1 = 10000000
+var vida1 = 100
 var countdown = 1
 var correndo = 0
-var municao = 600
+var municao = 6
 var caixademuni = 0
 var abaixado = 0
 var pegou_granada = false
 @export var tiro:PackedScene
+var animation = 0
 #@export var hit:PackedScene
 #@export var hit2:PackedScene
 
@@ -32,13 +33,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y += grav
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and abaixado == 0:
+	if Input.is_action_just_pressed("jump") and is_on_floor() and abaixado == 0 and animation == 0:
 		velocity.y = JUMP_VELOCITY
+		$prosprite.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
-	if direction:
+	if direction and animation == 0:
 		if is_on_floor():
 			if Input.is_action_pressed("run"):
 				velocity.x = direction * velocidade * 1.5
@@ -53,23 +55,23 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if Input.is_action_pressed("left") and abaixado == 0:
+	if Input.is_action_pressed("left") and abaixado == 0 and animation == 0:
 		$prosprite.flip_h = true
 		lado = -1
 		$prosprite.play("walk")
 		
-	if Input.is_action_pressed("right") and abaixado == 0:
+	if Input.is_action_pressed("right") and abaixado == 0 and animation == 0:
 		$prosprite.flip_h = false
 		lado = 1
 		$prosprite.play("walk")
 	
-	if not Input.is_action_pressed("right") and not Input.is_action_pressed("left") and abaixado == 0:
+	if not Input.is_action_pressed("right") and not Input.is_action_pressed("left") and abaixado == 0 and animation == 0:
 		$prosprite.play("idle")
 	#if Input.is_action_just_pressed("ataque") and municao > 0:
 		#var bala = tiro.instantiate()
 		#
 	
-	if Input.is_action_just_pressed("ataque") and municao > 0 and abaixado == 0:
+	if Input.is_action_just_pressed("ataque") and municao > 0 and abaixado == 0 and animation == 0:
 		municao -= 1
 		var atiro = tiro.instantiate()
 		atiro.position.x = position.x+4
@@ -107,7 +109,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			municao += 0
 		
-	if Input.is_action_just_pressed("agachar"):
+	if Input.is_action_just_pressed("agachar") and animation == 0:
 		if abaixado == 0:
 			abaixado = 1
 			$CollisionShape2D.disabled = true
@@ -115,19 +117,26 @@ func _physics_process(delta: float) -> void:
 			$prosprite.play("down")
 			
 	
-	if Input.is_action_pressed("left") and abaixado == 1:
+	if Input.is_action_pressed("left") and abaixado == 1 and animation == 0:
 		$prosprite.flip_h = true
 		lado = -1
 		
-	if Input.is_action_pressed("right") and abaixado == 1:
+	if Input.is_action_pressed("right") and abaixado == 1 and animation == 0:
 		$prosprite.flip_h = false
 		lado = 1
 	
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and animation == 0:
 		if abaixado == 1:
 			abaixado = 0
 			$CollisionShape2D.disabled = false
 			velocidade = 250
+			
+	if animation == 1:
+		position.x -= velocidade * delta
+		$prosprite.flip_h = true
+		
+	if animation == 2:
+		$prosprite.play("idle")
 
 func ligacao():
 	var municaoi = get_parent().get_node("hud").get_var("municao")
@@ -144,3 +153,11 @@ func danolev():
 
 func danolam():
 	get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")
+
+func animat():
+	animation = 1
+	$Timer.start
+
+
+func _on_timer_timeout() -> void:
+	animation == 2

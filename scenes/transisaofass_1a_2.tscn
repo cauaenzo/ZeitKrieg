@@ -1,12 +1,136 @@
-[gd_scene load_steps=2 format=3 uid="uid://b78r3lnqcc7ej"]
+[gd_scene load_steps=17 format=3 uid="uid://b78r3lnqcc7ej"]
+
+[ext_resource type="Script" path="res://script/transisaofass_1a_2.gd" id="1_22k1s"]
+[ext_resource type="Texture2D" uid="uid://cqc01piaxlkou" path="res://assets/cenariobunkcer.png" id="1_knjp5"]
+[ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="2_1qab0"]
+[ext_resource type="Texture2D" uid="uid://ddu3ioe5ge0u2" path="res://assets/manopla.png" id="3_2u4qe"]
+[ext_resource type="Texture2D" uid="uid://cx8s3h8p2isvt" path="res://assets/generalatirando.png" id="5_pa7i3"]
+[ext_resource type="Texture2D" uid="uid://4hfw3lmuceo1" path="res://assets/generallough.png" id="6_r8cnh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guyeo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ga6m"]
-size = Vector2(1171, 97)
+size = Vector2(1171, 120.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pc5u"]
+atlas = ExtResource("5_pa7i3")
+region = Rect2(0, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o83r8"]
+atlas = ExtResource("5_pa7i3")
+region = Rect2(250, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjfj5"]
+atlas = ExtResource("5_pa7i3")
+region = Rect2(500, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hp3u"]
+atlas = ExtResource("5_pa7i3")
+region = Rect2(750, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r7vi"]
+atlas = ExtResource("5_pa7i3")
+region = Rect2(1000, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeg58"]
+atlas = ExtResource("6_r8cnh")
+region = Rect2(250, 0, 250, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8iia"]
+atlas = ExtResource("6_r8cnh")
+region = Rect2(0, 0, 250, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbeoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pc5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o83r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjfj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hp3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r7vi")
+}],
+"loop": true,
+"name": &"atirar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeg58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8iia")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="transisaofass1a2" type="Node2D"]
+script = ExtResource("1_22k1s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -400.0
+offset_top = 11.0
+offset_right = 837.0
+offset_bottom = 807.0
+color = Color(0, 0, 0, 1)
+
+[node name="Cenariobunkcer" type="Sprite2D" parent="."]
+position = Vector2(250, 432)
+scale = Vector2(1.004, 1.24)
+texture = ExtResource("1_knjp5")
+
+[node name="manopla" type="Area2D" parent="."]
+position = Vector2(466, 466)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="manopla"]
+shape = SubResource("RectangleShape2D_guyeo")
+
+[node name="Sprite2D" type="Sprite2D" parent="manopla"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_2u4qe")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(575, 560)
+position = Vector2(575, 548.25)
 shape = SubResource("RectangleShape2D_3ga6m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-40, 509)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_3ga6m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(562, 484)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_3ga6m")
+
+[node name="protagonista" parent="." instance=ExtResource("2_1qab0")]
+position = Vector2(39, 403)
+
+[node name="Camera2D" type="Camera2D" parent="protagonista"]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 278
+limit_right = 500
+
+[node name="comandante" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(80, 443)
+sprite_frames = SubResource("SpriteFrames_nbeoc")
+animation = &"atirar"
+autoplay = "default"
+flip_h = true
+
+[connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]
