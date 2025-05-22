@@ -1,0 +1,210 @@
+[gd_scene load_steps=11 format=3 uid="uid://g74incab141"]
+
+[ext_resource type="Texture2D" uid="uid://b4jrndqhf2eji" path="res://assets/relogio.png" id="1_pxkyb"]
+[ext_resource type="Script" path="res://script/zeitkrieg.gd" id="1_s2hyp"]
+[ext_resource type="Texture2D" uid="uid://bisr1m5tel4un" path="res://assets/zeitkrieg.png" id="2_ltitw"]
+[ext_resource type="FontFile" uid="uid://bf1ghiqsnm4i2" path="res://assets/fontes/iceland_winterstorm/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_ro8oe"]
+[ext_resource type="AudioStream" uid="uid://d3mexc5ptp4aq" path="res://assets/songs/musics/Arg8 - Musica final.ogg" id="4_pnnwr"]
+
+[sub_resource type="Animation" id="Animation_ptk65"]
+resource_name = "titulo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Relogio:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Zeitkrieg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1v68d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Relogio:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Zeitkrieg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d4lol"]
+resource_name = "subtitulo"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s8kcx"]
+resource_name = "beta"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1kx5"]
+_data = {
+"RESET": SubResource("Animation_1v68d"),
+"beta": SubResource("Animation_s8kcx"),
+"subtitulo": SubResource("Animation_d4lol"),
+"titulo": SubResource("Animation_ptk65")
+}
+
+[node name="zeitkrieg" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2hyp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -99.0
+offset_top = -10.0
+offset_right = 1255.0
+offset_bottom = 685.0
+color = Color(0, 0, 0, 1)
+
+[node name="Relogio" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(585, 303)
+scale = Vector2(3, 3)
+texture = ExtResource("1_pxkyb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o1kx5")
+}
+
+[node name="Zeitkrieg" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(582, 309)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ltitw")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 470.0
+offset_top = 341.0
+offset_right = 727.0
+offset_bottom = 384.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ro8oe")
+theme_override_font_sizes/font_size = 50
+text = "A guerra do tempo"
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 348.0
+offset_right = 1058.0
+offset_bottom = 391.0
+rotation = -0.650973
+theme_override_colors/font_color = Color(0.807843, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ro8oe")
+theme_override_font_sizes/font_size = 50
+text = "beta"
+
+[node name="nome" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="subtitulo" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="beta" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pnnwr")
+autoplay = true
+
+[connection signal="timeout" from="nome" to="." method="_on_nome_timeout"]
+[connection signal="timeout" from="subtitulo" to="." method="_on_subtitulo_timeout"]
+[connection signal="timeout" from="beta" to="." method="_on_beta_timeout"]

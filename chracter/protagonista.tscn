@@ -1,15 +1,18 @@
-[gd_scene load_steps=37 format=3 uid="uid://css5swjn42ufd"]
+[gd_scene load_steps=40 format=3 uid="uid://css5swjn42ufd"]
 
 [ext_resource type="Script" path="res://script/protagonista.gd" id="1_vvfye"]
 [ext_resource type="PackedScene" uid="uid://buvsoktmryxka" path="res://scenes/tiro.tscn" id="2_4ngje"]
 [ext_resource type="Texture2D" uid="uid://bhj51084v861u" path="res://assets/sprite-alemao.png" id="3_gxx80"]
 [ext_resource type="Texture2D" uid="uid://c5uqj4r61yptd" path="res://assets/pixilart-sprite.png" id="3_kt1ly"]
-[ext_resource type="Texture2D" uid="uid://chvhjbu5335bi" path="res://assets/AGACHADOANDANDO.png" id="3_vane3"]
-[ext_resource type="Texture2D" uid="uid://byl5okaxjmg5b" path="res://assets/ALEMAOPULADK.png" id="5_h4upk"]
-[ext_resource type="Texture2D" uid="uid://bqwq6j1ms26qi" path="res://assets/simpleassets/barravazia.png" id="7_gym1m"]
-[ext_resource type="Texture2D" uid="uid://bips1exqbnj3r" path="res://assets/simpleassets/barracheia.png" id="8_6hw1v"]
-[ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="8_mm3vm"]
-[ext_resource type="Texture2D" uid="uid://bf7ivim30ha5g" path="res://assets/bomba.png" id="9_k5dpf"]
+[ext_resource type="Texture2D" uid="uid://dynlyewtbcgjr" path="res://assets/AGACHADOANDANDO.png" id="3_vane3"]
+[ext_resource type="Texture2D" uid="uid://cml6hnrgfj155" path="res://assets/ALEMAOPULADK.png" id="5_h4upk"]
+[ext_resource type="Texture2D" uid="uid://c4n3lwiknwehf" path="res://assets/simpleassets/barravazia.png" id="7_gym1m"]
+[ext_resource type="Texture2D" uid="uid://5q7qpr37up4b" path="res://assets/simpleassets/barracheia.png" id="8_6hw1v"]
+[ext_resource type="FontFile" uid="uid://crcoxnuvwadrg" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="8_mm3vm"]
+[ext_resource type="Texture2D" uid="uid://b2rgbi3gbn78u" path="res://assets/moldura.png" id="9_4n2n7"]
+[ext_resource type="Texture2D" uid="uid://cxt6hfdaqcb47" path="res://assets/bomba.png" id="9_k5dpf"]
+[ext_resource type="Texture2D" uid="uid://b08mickgg55id" path="res://assets/coracao.png" id="10_guyrc"]
+[ext_resource type="Texture2D" uid="uid://bq8qnwh2f7rad" path="res://assets/bala.png" id="11_ej1vx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmcgg"]
 atlas = ExtResource("3_vane3")
@@ -242,6 +245,28 @@ nine_patch_stretch = true
 texture_under = ExtResource("7_gym1m")
 texture_progress = ExtResource("8_6hw1v")
 
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(555.5, 609)
+scale = Vector2(1.2725, 0.5)
+texture = ExtResource("9_4n2n7")
+
+[node name="Coracao" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(576, 563)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_guyrc")
+
+[node name="Bala" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(569, 618)
+rotation = 4.53786
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_ej1vx")
+
+[node name="Bala2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(583, 628)
+rotation = -4.53786
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_ej1vx")
+
 [node name="nummuni" type="Label" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
@@ -266,9 +291,3 @@ position = Vector2(17, 53)
 rotation = 0.427606
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_k5dpf")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

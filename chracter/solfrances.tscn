@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://script/solfrances.gd" id="1_e7gpm"]
 [ext_resource type="PackedScene" uid="uid://ckbcn3lsny3ge" path="res://scenes/caixademunicao.tscn" id="2_a7pmy"]
 [ext_resource type="PackedScene" uid="uid://c2w3f1y16jne0" path="res://scenes/tiroinimi.tscn" id="3_ux4nu"]
-[ext_resource type="Texture2D" uid="uid://vjsrvma48cmv" path="res://assets/frances2parado.png" id="4_wrekj"]
-[ext_resource type="Texture2D" uid="uid://co0y61ekney3j" path="res://assets/francesandando2.png" id="5_qvb4s"]
-[ext_resource type="Texture2D" uid="uid://bnu2aat1rqcr0" path="res://assets/frances4parado.png" id="6_34ypv"]
-[ext_resource type="Texture2D" uid="uid://f2cuaf7dw5w2" path="res://assets/francesandando4.png" id="7_ar33c"]
-[ext_resource type="Texture2D" uid="uid://hea7nel51kr2" path="res://assets/frances3parado.png" id="8_2k50r"]
-[ext_resource type="Texture2D" uid="uid://btigysm0k2e12" path="res://assets/francesandando3.png" id="9_cah7g"]
-[ext_resource type="Texture2D" uid="uid://dikhnkh26k47a" path="res://assets/francesparado1.png" id="10_4g04t"]
-[ext_resource type="Texture2D" uid="uid://cxus76uaks2fq" path="res://assets/francesandando1.png" id="11_4magm"]
+[ext_resource type="Texture2D" uid="uid://d3bonoc7r8n5p" path="res://assets/frances2parado.png" id="4_wrekj"]
+[ext_resource type="Texture2D" uid="uid://gd4wjxpo3xaa" path="res://assets/francesandando2.png" id="5_qvb4s"]
+[ext_resource type="Texture2D" uid="uid://oyluc31mka35" path="res://assets/frances4parado.png" id="6_34ypv"]
+[ext_resource type="Texture2D" uid="uid://bg2bgfl4m0eed" path="res://assets/francesandando4.png" id="7_ar33c"]
+[ext_resource type="Texture2D" uid="uid://de1t5rn4hkshn" path="res://assets/frances3parado.png" id="8_2k50r"]
+[ext_resource type="Texture2D" uid="uid://gn4nc12qj35j" path="res://assets/francesandando3.png" id="9_cah7g"]
+[ext_resource type="Texture2D" uid="uid://b4aesl0ycpgke" path="res://assets/francesparado1.png" id="10_4g04t"]
+[ext_resource type="Texture2D" uid="uid://bq7vikgh1up27" path="res://assets/francesandando1.png" id="11_4magm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kakvy"]
 atlas = ExtResource("4_wrekj")
@@ -517,9 +517,8 @@ visible = false
 texture_filter = 1
 position = Vector2(15, 36)
 sprite_frames = SubResource("SpriteFrames_pjdyw")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.70062
 flip_h = true
 
 [node name="spritefrances2" type="AnimatedSprite2D" parent="."]

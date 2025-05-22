@@ -5,16 +5,16 @@ var dir: Vector2 = Vector2.ZERO
 var accel: float = 10.0
 var friction: float = 8.0
 var velocidade = 250
-var JUMP_VELOCITY = -200.0
+var JUMP_VELOCITY = -300.0
 var grav = 10
 var lado = 1
 var vida1 = 100
 var energia = 30
 var countdown = 1
 var correndo = 0
-var abaixado = 0
 var jaacel = 0
 var gambiarra = 0
+var attacando = 0
 @onready var rewinder = $"Time Rewinder"
 @onready var effects = $CanvasLayer/PostProcess
 # Função de inicialização
@@ -31,11 +31,13 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("timerewinding") and energia == 30:
 		rewinder.rewind()
+		vida1 += 100
+		$CanvasLayer2/vida.value = vida1
 
 	move_and_slide()
 
 	# Controle de pulo
-	if Input.is_action_just_pressed("jump") and is_on_floor() and abaixado == 0:
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Pega a direção de movimento com base no input do usuário
@@ -69,28 +71,18 @@ func _physics_process(delta: float) -> void:
 		cfg.Glitch = false
 	
 	# Controle de direção (lado do personagem)
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left") and attacando == 0:
 		lado = -1
-		#$macacocinza1.flip_h = false
-		#$macacocinza1.play("walk")
+		$protaspritemp.flip_h = true
+		$protaspritemp.play("walk")
 
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") and attacando == 0:
 		lado = 1
-		#$macacocinza1.flip_h = true
-		#$macacocinza1.play("walk")
-
-	# Controle de agachar
-	if Input.is_action_just_pressed("agachar") and jaacel == 0:
-		if abaixado == 0:
-			abaixado = 1
-			$CollisionShape2D.disabled = true
-			velocidade = 125
-
-	if Input.is_action_just_pressed("jump") and jaacel == 0:
-		if abaixado == 1:
-			abaixado = 0
-			$CollisionShape2D.disabled = false
-			velocidade = 250
+		$protaspritemp.flip_h = false
+		$protaspritemp.play("walk")
+	
+	if not Input.is_action_pressed("right") and not Input.is_action_pressed("left") and attacando == 0:
+		$protaspritemp.play("idle")
 	
 	#if Input.is_action_just_pressed("pararpoder"):
 		#$paralisar/CollisionShape2D3.disabled = false
@@ -99,7 +91,7 @@ func _physics_process(delta: float) -> void:
 		
 
 	# Controle de aceleração
-	if Input.is_action_just_pressed("acelerar") and jaacel == 0 and abaixado == 0:
+	if Input.is_action_just_pressed("acelerar") and jaacel == 0:
 		jaacel = 1
 		velocidade = 750
 		$tempdacel.start()
@@ -110,17 +102,30 @@ func _physics_process(delta: float) -> void:
 		
 	
 	if Input.is_action_just_pressed("ataque"):
-		if lado == -1:
+		if lado == -1 and attacando == 0:
 			$attesq/CollisionShape2D.disabled = false
 			$attesqti.start()
-		else:
+			$protaspritemp.play("attack")
+			$protaspritemp.flip_h = true
+			attacando = 1
+		if lado == 1 and attacando == 0:
 			$attdir/CollisionShape2D.disabled = false
 			$attdirti.start()
+			$protaspritemp.play("attack")
+			$protaspritemp.flip_h = false
+			attacando = 1
 		
 func danolev():
 	vida1 -= 25
+	$CanvasLayer2/vida.value = vida1
 	if vida1 <= 0:
-		queue_free()
+		get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")
+
+func daninho():
+	vida1 -= 10
+	$CanvasLayer2/vida.value = vida1
+	if vida1 <= 0:
+		get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")
 
 # Funções para o controle de aceleração
 func _on_tempdacel_timeout() -> void:
@@ -131,17 +136,23 @@ func _on_tempdacel_timeout() -> void:
 func _on_attesq_body_entered(body: Node2D) -> void:
 	if body.has_method("inibaleado"):
 		body.inibaleado()
+	if body.has_method("sombralevadano"):
+		body.sombralevadano()
 
 func _on_attdir_body_entered(body: Node2D) -> void:
 	if body.has_method("inibaleado"):
 		body.inibaleado()
+	if body.has_method("sombralevadano"):
+		body.sombralevadano()
 
 # Funções para o controle de animações de ataque
 func _on_attesqti_timeout() -> void:
 	$attesq/CollisionShape2D.disabled = true
+	attacando = 0
 
 func _on_attdirti_timeout() -> void:
 	$attdir/CollisionShape2D.disabled = true
+	attacando = 0
 
 
 func _on_tempodepoder_timeout() -> void:

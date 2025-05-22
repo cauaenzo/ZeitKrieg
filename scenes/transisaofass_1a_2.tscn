@@ -1,11 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://b78r3lnqcc7ej"]
+[gd_scene load_steps=26 format=3 uid="uid://b78r3lnqcc7ej"]
 
 [ext_resource type="Script" path="res://script/transisaofass_1a_2.gd" id="1_22k1s"]
-[ext_resource type="Texture2D" uid="uid://cqc01piaxlkou" path="res://assets/cenariobunkcer.png" id="1_knjp5"]
+[ext_resource type="Texture2D" uid="uid://colla15f1tpxf" path="res://assets/cenariobunkcer.png" id="1_knjp5"]
 [ext_resource type="PackedScene" uid="uid://css5swjn42ufd" path="res://chracter/protagonista.tscn" id="2_1qab0"]
-[ext_resource type="Texture2D" uid="uid://ddu3ioe5ge0u2" path="res://assets/manopla.png" id="3_2u4qe"]
-[ext_resource type="Texture2D" uid="uid://cx8s3h8p2isvt" path="res://assets/generalatirando.png" id="5_pa7i3"]
-[ext_resource type="Texture2D" uid="uid://4hfw3lmuceo1" path="res://assets/generallough.png" id="6_r8cnh"]
+[ext_resource type="Texture2D" uid="uid://c30vyvl00icoh" path="res://assets/manopla.png" id="3_2u4qe"]
+[ext_resource type="Texture2D" uid="uid://ck3nmj6hrln53" path="res://assets/generalatirando.png" id="5_pa7i3"]
+[ext_resource type="Texture2D" uid="uid://ceqjr0upjsetq" path="res://assets/generallough.png" id="6_r8cnh"]
+[ext_resource type="AudioStream" uid="uid://cocywjop5d5eh" path="res://assets/dialogos/Miguel-1.wav" id="7_op8ew"]
+[ext_resource type="Texture2D" uid="uid://dwy1co8q6twv1" path="res://assets/buttonCORRIGIDO.png" id="8_1rubu"]
+[ext_resource type="FontFile" uid="uid://crcoxnuvwadrg" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="9_74fjs"]
+[ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="10_hu1ki"]
+[ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="11_trivs"]
+[ext_resource type="AudioStream" uid="uid://bdv6d6irnukmg" path="res://assets/songs/sound efects/tiro.wav" id="12_2hwgw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guyeo"]
 
@@ -58,9 +64,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8r7vi")
 }],
-"loop": true,
+"loop": false,
 "name": &"atirar",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -73,6 +79,98 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tto4e"]
+
+[sub_resource type="Resource" id="Resource_xpn42"]
+script = ExtResource("11_trivs")
+reload = false
+ASCII = false
+ASCIISize = Vector2(4, 9)
+ChromaticAberration = false
+StrenghtCA = 1.0
+Blur = false
+L_O_D = 1.0
+FishEye = false
+FishEyeAspect = 1.0
+FishEyeDistortion = 1.0
+FishEyeRadius = 1.0
+FishEyeAlpha = 1.0
+FishEyeCrop = 1.0
+FishEyeCropColor = Color(0, 0, 0, 1)
+Vignette = true
+VignetteIntensity = 2.0
+VignetteOpacity = 0.506
+VignetteR_G_B = Color(0, 0, 0, 1)
+Glitch = false
+GlitchRange = 0.05
+GlitchNoiseQuality = 250.0
+GlitchIntenity = 0.0088
+GlitchOffset = 0.03
+GlitchColorOffset = 1.3
+Outline = false
+OutlineColor = Color(0, 0, 0, 1)
+OutlineThreshold = 0.0
+OutlineBlend = 0.01
+Grain = false
+GrainPower = 75
+CircularWaves = false
+CircularWavesAmplitude = 2.0
+CircularWavesFrequency = 12.69
+CircularWavesRippleRate = 9.2
+SpeedLines = false
+SpeedLinesColor = Color(1, 1, 1, 1)
+SpeedLinesCount = 2
+SpeedLineDensity = 0.072
+SpeedLineSpeed = 20
+particle_storm = false
+particle_storm_color = Color(0.87, 0.78, 0.6, 1)
+particle_storm_intensity = 0.5
+particle_storm_chaos = 1.0
+particle_storm_scale = 1.0
+particle_storm_density = 1.0
+particle_storm_wind_direction = Vector2(1, 0.2)
+particle_storm_wind_speed = 1.0
+directional_drift = false
+directional_drift_color = Color(0.76, 0.69, 0.5, 0.3)
+directional_drift_density = 0.3
+directional_drift_speed = 1.0
+directional_drift_scale = 30.0
+directional_drift_direction = Vector2(1, 0.5)
+directional_drift_layer_ratio = 1.2
+ColorCorrection = false
+ColorCorrectionTint = Color(0, 0, 0, 1)
+ColorCorrectionBrightness = 0.0
+ColorCorrectionSaturation = 0.0
+Palette = false
+Pixelate = false
+PixelatePixelSize = 8
+CRT = false
+overlay = false
+scanlines_opacity = 0.4
+scanlines_width = 0.25
+grille_opacity = 0.3
+pixelate = true
+roll_speed = 8.0
+roll_size = 15.0
+roll_variation = 1.8
+distort_intensity = 0.05
+noise_opacity = 0.4
+noise_speed = 5.0
+static_noise_intensity = 0.06
+aberration = 0.03
+brightness = 1.4
+discolor = true
+warp_amount = 1.0
+clip_warp = false
+vignette_intensity = 0.4
+vignette_opacity = 0.5
+AnalogMonitor = false
+AnalogMonitorResolution = Vector2(256, 256)
+ScreenShake = false
+ScreenShakePower = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0rbp"]
 
 [node name="transisaofass1a2" type="Node2D"]
 script = ExtResource("1_22k1s")
@@ -117,9 +215,10 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_3ga6m")
 
 [node name="protagonista" parent="." instance=ExtResource("2_1qab0")]
-position = Vector2(39, 403)
+position = Vector2(28, 401)
 
 [node name="Camera2D" type="Camera2D" parent="protagonista"]
+position = Vector2(21, 1)
 zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 278
@@ -133,4 +232,81 @@ animation = &"atirar"
 autoplay = "default"
 flip_h = true
 
+[node name="paralizacao" type="Area2D" parent="."]
+position = Vector2(208, 474)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paralizacao"]
+position = Vector2(0, -172)
+shape = SubResource("RectangleShape2D_tto4e")
+
+[node name="dialogo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_op8ew")
+
+[node name="falas" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Generallough" type="Sprite2D" parent="falas"]
+position = Vector2(602, 538)
+scale = Vector2(2, 2)
+texture = ExtResource("6_r8cnh")
+flip_h = true
+hframes = 2
+vframes = 2
+
+[node name="ButtonCorrigido" type="Sprite2D" parent="falas"]
+modulate = Color(0.72916, 0.20479, 0.258132, 1)
+position = Vector2(562, 583)
+scale = Vector2(2.004, 1.11)
+texture = ExtResource("8_1rubu")
+vframes = 2
+
+[node name="Label" type="Label" parent="falas"]
+offset_left = 419.0
+offset_top = 566.0
+offset_right = 734.0
+offset_bottom = 621.0
+theme_override_fonts/font = ExtResource("9_74fjs")
+theme_override_font_sizes/font_size = 21
+text = "Voce viveu por tempo
+demais, Franz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tempo1" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="fase2" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PostProcess" type="CanvasLayer" parent="CanvasLayer"]
+script = ExtResource("10_hu1ki")
+configuration = SubResource("Resource_xpn42")
+
+[node name="tiro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_2hwgw")
+
+[node name="escuridao" type="ColorRect" parent="."]
+visible = false
+offset_left = -82.0
+offset_top = 211.0
+offset_right = 627.0
+offset_bottom = 621.0
+color = Color(0, 0, 0, 1)
+
+[node name="finalmesmo" type="Timer" parent="."]
+wait_time = 0.45
+
+[node name="desaparecer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="desaparecer"]
+position = Vector2(40, 461)
+shape = SubResource("RectangleShape2D_k0rbp")
+
 [connection signal="body_entered" from="manopla" to="." method="_on_manopla_body_entered"]
+[connection signal="body_entered" from="paralizacao" to="." method="_on_paralizacao_body_entered"]
+[connection signal="timeout" from="tempo1" to="." method="_on_tempo_1_timeout"]
+[connection signal="timeout" from="fase2" to="." method="_on_fase_2_timeout"]
+[connection signal="timeout" from="finalmesmo" to="." method="_on_finalmesmo_timeout"]
+[connection signal="body_entered" from="desaparecer" to="." method="_on_desaparecer_body_entered"]

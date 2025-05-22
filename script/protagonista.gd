@@ -23,7 +23,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	
 	#Logica de visualizar granada no jogador
-	print(pegou_granada)
+	#print(pegou_granada)
 	if pegou_granada:
 		$Bomba.visible = true
 	else:
@@ -130,12 +130,8 @@ func _physics_process(delta: float) -> void:
 			abaixado = 0
 			$CollisionShape2D.disabled = false
 			velocidade = 250
-			
+
 	if animation == 1:
-		position.x -= velocidade * delta
-		$prosprite.flip_h = true
-		
-	if animation == 2:
 		$prosprite.play("idle")
 
 func ligacao():
@@ -156,8 +152,9 @@ func danolam():
 
 func animat():
 	animation = 1
-	$Timer.start
 
+func trassiao():
+	$CanvasLayer.visible = false
 
-func _on_timer_timeout() -> void:
-	animation == 2
+func existe():
+	pass
