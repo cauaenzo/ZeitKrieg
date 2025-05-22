@@ -1,5 +1,6 @@
-AudioStreamPlayer
 Timer
+PostProcess
+AudioStreamPlayer
 Label
 AnimationPlayer
 ColorRect
@@ -11,4 +12,3 @@ Sprite2D
 CharacterBody2D
 Camera2D
 StaticBody2D
-TileMapLayer

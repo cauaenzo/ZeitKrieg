@@ -10,7 +10,7 @@ var speed = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass 
+	$musica.stream.loop = true 
 	
 
 
@@ -60,6 +60,7 @@ func _on_detector_body_entered(body: Node2D) -> void:
 		$sombravida.visible = true
 		$Timer.autostart = true
 		$detector.queue_free()
+		$musica.play()
 		
 		
 func _on_timer_timeout() -> void:

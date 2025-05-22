@@ -1,13 +1,14 @@
-[gd_scene load_steps=55 format=3 uid="uid://do2so8qfai8rq"]
+[gd_scene load_steps=56 format=3 uid="uid://do2so8qfai8rq"]
 
-[ext_resource type="Texture2D" uid="uid://f87ap0dws0b3" path="res://assets/batendCORRIGIDO.png" id="1_ffbuf"]
+[ext_resource type="Texture2D" uid="uid://dypd23657kr4k" path="res://assets/batendCORRIGIDO.png" id="1_ffbuf"]
 [ext_resource type="Script" path="res://chracter/sombra.gd" id="1_iguh4"]
-[ext_resource type="Texture2D" uid="uid://dvv382krf0li5" path="res://assets/dashFranzz.png" id="2_rxygu"]
-[ext_resource type="Texture2D" uid="uid://bwk3ltjfoaiax" path="res://assets/COMANOPLAidle.png" id="3_kesm6"]
-[ext_resource type="Texture2D" uid="uid://bd5ggyqxf854v" path="res://assets/COMANPLAANDANDO.png" id="4_ro6ic"]
-[ext_resource type="Texture2D" uid="uid://c6jf0enxcw8k8" path="res://assets/moldura.png" id="6_qg1bm"]
-[ext_resource type="FontFile" uid="uid://bityl1mo56v00" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="7_s2rce"]
+[ext_resource type="Texture2D" uid="uid://bw01nlbqd2nhy" path="res://assets/dashFranzz.png" id="2_rxygu"]
+[ext_resource type="Texture2D" uid="uid://b14puffs43r6y" path="res://assets/COMANOPLAidle.png" id="3_kesm6"]
+[ext_resource type="Texture2D" uid="uid://cddo2l0tuifqh" path="res://assets/COMANPLAANDANDO.png" id="4_ro6ic"]
+[ext_resource type="Texture2D" uid="uid://b2rgbi3gbn78u" path="res://assets/moldura.png" id="6_qg1bm"]
+[ext_resource type="FontFile" uid="uid://cr075dtu5xs24" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.otf" id="7_s2rce"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="8_f0qs6"]
+[ext_resource type="AudioStream" uid="uid://c6qcprfx8v8mq" path="res://assets/songs/musics/Boss-fight.ogg" id="9_or8bn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5a8b"]
 atlas = ExtResource("1_ffbuf")
@@ -407,6 +408,9 @@ script = ExtResource("8_f0qs6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="supersombra"]
 position = Vector2(27, -1364)
 shape = SubResource("RectangleShape2D_u1bo3")
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_or8bn")
 
 [connection signal="body_entered" from="soco" to="." method="_on_soco_body_entered"]
 [connection signal="body_entered" from="soco2" to="." method="_on_soco_body_entered"]

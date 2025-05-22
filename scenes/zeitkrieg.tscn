@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://g74incab141"]
+[gd_scene load_steps=14 format=3 uid="uid://g74incab141"]
 
-[ext_resource type="Texture2D" uid="uid://dw5vvvll1ctt7" path="res://assets/relogio.png" id="1_pxkyb"]
+[ext_resource type="Texture2D" uid="uid://b4jrndqhf2eji" path="res://assets/relogio.png" id="1_pxkyb"]
 [ext_resource type="Script" path="res://script/zeitkrieg.gd" id="1_s2hyp"]
-[ext_resource type="Texture2D" uid="uid://cm8gup5gqhggj" path="res://assets/zeitkrieg.png" id="2_ltitw"]
-[ext_resource type="FontFile" uid="uid://diwk1wn2j6auk" path="res://assets/fontes/iceland_winterstorm/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_ro8oe"]
-[ext_resource type="AudioStream" uid="uid://b3og4gl1s82v4" path="res://assets/songs/musics/Arg8 - Musica final.ogg" id="4_pnnwr"]
+[ext_resource type="Texture2D" uid="uid://bisr1m5tel4un" path="res://assets/zeitkrieg.png" id="2_ltitw"]
+[ext_resource type="FontFile" uid="uid://bf1ghiqsnm4i2" path="res://assets/fontes/iceland_winterstorm/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="3_ro8oe"]
+[ext_resource type="AudioStream" uid="uid://d3mexc5ptp4aq" path="res://assets/songs/musics/Arg8 - Musica final.ogg" id="4_pnnwr"]
+[ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="6_d6ftx"]
+[ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="7_airyx"]
 
 [sub_resource type="Animation" id="Animation_1v68d"]
 length = 0.001
@@ -124,6 +126,94 @@ _data = {
 "titulo": SubResource("Animation_ptk65")
 }
 
+[sub_resource type="Resource" id="Resource_gfbtx"]
+script = ExtResource("7_airyx")
+reload = false
+ASCII = false
+ASCIISize = Vector2(4, 9)
+ChromaticAberration = false
+StrenghtCA = 1.0
+Blur = false
+L_O_D = 1.0
+FishEye = false
+FishEyeAspect = 1.0
+FishEyeDistortion = 1.0
+FishEyeRadius = 1.0
+FishEyeAlpha = 1.0
+FishEyeCrop = 1.0
+FishEyeCropColor = Color(0, 0, 0, 1)
+Vignette = false
+VignetteIntensity = 0.4
+VignetteOpacity = 0.5
+VignetteR_G_B = Color(0, 0, 0, 1)
+Glitch = false
+GlitchRange = 0.05
+GlitchNoiseQuality = 250.0
+GlitchIntenity = 0.001
+GlitchOffset = 0.03
+GlitchColorOffset = 1.3
+Outline = false
+OutlineColor = Color(0, 0, 0, 1)
+OutlineThreshold = 0.0
+OutlineBlend = 0.01
+Grain = false
+GrainPower = 75
+CircularWaves = false
+CircularWavesAmplitude = 2.0
+CircularWavesFrequency = 12.69
+CircularWavesRippleRate = 9.2
+SpeedLines = false
+SpeedLinesColor = Color(1, 1, 1, 1)
+SpeedLinesCount = 2
+SpeedLineDensity = 0.072
+SpeedLineSpeed = 20
+particle_storm = false
+particle_storm_color = Color(0.87, 0.78, 0.6, 1)
+particle_storm_intensity = 0.5
+particle_storm_chaos = 1.0
+particle_storm_scale = 1.0
+particle_storm_density = 1.0
+particle_storm_wind_direction = Vector2(1, 0.2)
+particle_storm_wind_speed = 1.0
+directional_drift = false
+directional_drift_color = Color(0.76, 0.69, 0.5, 0.3)
+directional_drift_density = 0.3
+directional_drift_speed = 1.0
+directional_drift_scale = 30.0
+directional_drift_direction = Vector2(1, 0.5)
+directional_drift_layer_ratio = 1.2
+ColorCorrection = false
+ColorCorrectionTint = Color(0, 0, 0, 1)
+ColorCorrectionBrightness = 0.0
+ColorCorrectionSaturation = 0.0
+Palette = false
+Pixelate = false
+PixelatePixelSize = 8
+CRT = false
+overlay = false
+scanlines_opacity = 0.4
+scanlines_width = 0.25
+grille_opacity = 0.3
+pixelate = true
+roll_speed = 8.0
+roll_size = 15.0
+roll_variation = 1.8
+distort_intensity = 0.05
+noise_opacity = 0.4
+noise_speed = 5.0
+static_noise_intensity = 0.06
+aberration = 0.03
+brightness = 1.4
+discolor = true
+warp_amount = 1.0
+clip_warp = false
+vignette_intensity = 0.4
+vignette_opacity = 0.5
+AnalogMonitor = false
+AnalogMonitorResolution = Vector2(256, 256)
+ScreenShake = false
+ScreenShakePower = 0.1
+
 [node name="zeitkrieg" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -201,10 +291,19 @@ wait_time = 7.0
 one_shot = true
 autostart = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="musica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_pnnwr")
 autoplay = true
+
+[node name="PostProcess" type="CanvasLayer" parent="."]
+script = ExtResource("6_d6ftx")
+configuration = SubResource("Resource_gfbtx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
 
 [connection signal="timeout" from="nome" to="." method="_on_nome_timeout"]
 [connection signal="timeout" from="subtitulo" to="." method="_on_subtitulo_timeout"]
 [connection signal="timeout" from="beta" to="." method="_on_beta_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

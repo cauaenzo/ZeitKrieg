@@ -1,8 +1,5 @@
-res://scenes/fase_2.tscn
-res://script/fase_2.gd
-res://script/menudeentrar.gd
-res://chracter/sombra.gd
 res://scenes/fase_3.tscn
+res://script/fase_2.gd
 res://chracter/solmutad.tscn
 res://chracter/protagotemp.tscn
 res://chracter/protagonista.tscn
@@ -10,4 +7,7 @@ res://scenes/paraaxayer.tscn
 res://chracter/sombra.tscn
 res://scenes/zeitkrieg.tscn
 res://scenes/fase_1.tscn
+res://scenes/fase_2.tscn
 res://scenes/menudeentr.tscn
+res://chracter/sombra.gd
+res://script/zeitkrieg.gd

@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=4 uid="uid://bnyf7ctn1uqor"]
 
-[ext_resource type="Texture2D" uid="uid://b740mg5fvyud7" path="res://assets/cenariophase3.png" id="1_8tmbp"]
-[ext_resource type="Texture2D" uid="uid://mppy5sgxbu4e" path="res://assets/tileCORRETCTEST.png" id="1_cfnfo"]
+[ext_resource type="Texture2D" uid="uid://bunm45r7meuwh" path="res://assets/cenariophase3.png" id="1_8tmbp"]
+[ext_resource type="Texture2D" uid="uid://bijjyxkaftsl" path="res://assets/tileCORRETCTEST.png" id="1_cfnfo"]
 [ext_resource type="PackedScene" uid="uid://b3si8pm36ie1w" path="res://chracter/protagotemp.tscn" id="1_sl63c"]
 [ext_resource type="Script" path="res://script/fase_3.gd" id="1_udghi"]
-[ext_resource type="Texture2D" uid="uid://dw8stivpq3xfh" path="res://assets/roboidle.png" id="2_ibogf"]
+[ext_resource type="Texture2D" uid="uid://cyvelb1k31rvs" path="res://assets/roboidle.png" id="2_ibogf"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="3_2xkob"]
 [ext_resource type="Script" path="res://script/robo.gd" id="3_qgl4i"]
-[ext_resource type="AudioStream" uid="uid://b3og4gl1s82v4" path="res://assets/songs/musics/Arg8 - Musica final.ogg" id="7_kmd33"]
+[ext_resource type="AudioStream" uid="uid://d3mexc5ptp4aq" path="res://assets/songs/musics/Arg8 - Musica final.ogg" id="7_kmd33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vjbpf"]
 size = Vector2(103, 146.5)

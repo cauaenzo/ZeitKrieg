@@ -59,12 +59,14 @@ func _on_batalhainicio_timeout() -> void:
 	$sombra/sombra.visible = false
 	$sombra2.visible = true
 	$chao4.queue_free()
+	$musica.stop()
 
 func _on_ultimorecurso_body_entered(body: Node2D) -> void:
 	if body.is_in_group("boss"):
 		$sombra2.queue_free()
 		bossult = 1
 		$real.start()
+		$musica.play()
 
 
 func _on_real_timeout() -> void:
@@ -95,6 +97,7 @@ func _on_cutsnece_3_timeout() -> void:
 	$falas/fala4.visible = false
 	ligaravanco = 1
 	sombraver = 0
+	$sombra/sombra2.play("walk")
 	$cutscenefinal.start()
 
 func _on_cutscenefinal_timeout() -> void:
