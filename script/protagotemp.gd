@@ -116,7 +116,7 @@ func _physics_process(delta: float) -> void:
 			attacando = 1
 		
 func danolev():
-	vida1 -= 25
+	vida1 -= 20
 	$CanvasLayer2/vida.value = vida1
 	if vida1 <= 0:
 		get_tree().change_scene_to_file("res://scenes/telademorrte.tscn")

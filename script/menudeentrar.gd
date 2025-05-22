@@ -3,7 +3,7 @@ extends Control
 
 
 func _ready() -> void:
-	pass
+	$musica.stream.loop = true
 
 
 

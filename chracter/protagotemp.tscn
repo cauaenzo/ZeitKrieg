@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" path="res://script/protagotemp.gd" id="1_qo61a"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewinder.gd" id="2_j8ym0"]
-[ext_resource type="Texture2D" uid="uid://dypd23657kr4k" path="res://assets/batendCORRIGIDO.png" id="2_l84hf"]
-[ext_resource type="Texture2D" uid="uid://bw01nlbqd2nhy" path="res://assets/dashFranzz.png" id="3_ks3i6"]
+[ext_resource type="Texture2D" uid="uid://f87ap0dws0b3" path="res://assets/batendCORRIGIDO.png" id="2_l84hf"]
+[ext_resource type="Texture2D" uid="uid://dvv382krf0li5" path="res://assets/dashFranzz.png" id="3_ks3i6"]
 [ext_resource type="Script" path="res://addons/Time Rewinder/rewind_property.gd" id="3_wkc2x"]
-[ext_resource type="Texture2D" uid="uid://b14puffs43r6y" path="res://assets/COMANOPLAidle.png" id="4_nqaef"]
-[ext_resource type="Texture2D" uid="uid://cddo2l0tuifqh" path="res://assets/COMANPLAANDANDO.png" id="5_ixbqd"]
+[ext_resource type="Texture2D" uid="uid://bwk3ltjfoaiax" path="res://assets/COMANOPLAidle.png" id="4_nqaef"]
+[ext_resource type="Texture2D" uid="uid://bd5ggyqxf854v" path="res://assets/COMANPLAANDANDO.png" id="5_ixbqd"]
 [ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="7_evwiv"]
 [ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="8_rgmm3"]
-[ext_resource type="Texture2D" uid="uid://c4n3lwiknwehf" path="res://assets/simpleassets/barravazia.png" id="9_yvcii"]
-[ext_resource type="Texture2D" uid="uid://5q7qpr37up4b" path="res://assets/simpleassets/barracheia.png" id="10_lbcy1"]
-[ext_resource type="Texture2D" uid="uid://b08mickgg55id" path="res://assets/coracao.png" id="11_t4anc"]
-[ext_resource type="Texture2D" uid="uid://b2rgbi3gbn78u" path="res://assets/moldura.png" id="12_bs3yg"]
-[ext_resource type="Texture2D" uid="uid://d2wbtrlh4sxoc" path="res://assets/energy.png" id="14_4cqud"]
+[ext_resource type="Texture2D" uid="uid://bqwq6j1ms26qi" path="res://assets/simpleassets/barravazia.png" id="9_yvcii"]
+[ext_resource type="Texture2D" uid="uid://bips1exqbnj3r" path="res://assets/simpleassets/barracheia.png" id="10_lbcy1"]
+[ext_resource type="Texture2D" uid="uid://cf80wry8dyb58" path="res://assets/coracao.png" id="11_t4anc"]
+[ext_resource type="Texture2D" uid="uid://c6jf0enxcw8k8" path="res://assets/moldura.png" id="12_bs3yg"]
+[ext_resource type="Texture2D" uid="uid://bebt0uwynh8r3" path="res://assets/energy.png" id="14_4cqud"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5a8b"]
 atlas = ExtResource("2_l84hf")
@@ -188,7 +188,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 7.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -423,7 +423,7 @@ position = Vector2(19, 36)
 sprite_frames = SubResource("SpriteFrames_u46o1")
 animation = &"attack"
 autoplay = "idle"
-frame_progress = 0.512615
+frame_progress = 0.0787695
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16.5, 40.75)
@@ -451,10 +451,10 @@ disabled = true
 wait_time = 5.0
 
 [node name="attesqti" type="Timer" parent="."]
-wait_time = 1.1
+wait_time = 0.6
 
 [node name="attdirti" type="Timer" parent="."]
-wait_time = 1.1
+wait_time = 0.6
 
 [node name="Time Rewinder" type="Node" parent="."]
 script = ExtResource("2_j8ym0")

@@ -2,24 +2,24 @@
 
 [ext_resource type="PackedScene" uid="uid://b3si8pm36ie1w" path="res://chracter/protagotemp.tscn" id="1_4ixxo"]
 [ext_resource type="Script" path="res://script/fase_2.gd" id="1_tpb62"]
-[ext_resource type="Texture2D" uid="uid://blqe70vfno2hd" path="res://assets/aranha-removebg-preview__1_-removebg-preview.png" id="2_7cjm5"]
+[ext_resource type="Texture2D" uid="uid://f6x5rjf55qtv" path="res://assets/aranha-removebg-preview__1_-removebg-preview.png" id="2_7cjm5"]
 [ext_resource type="PackedScene" uid="uid://do2so8qfai8rq" path="res://chracter/sombra.tscn" id="2_f2jvb"]
-[ext_resource type="Texture2D" uid="uid://b615o58x8svcl" path="res://assets/linhasdotempo.jpeg" id="2_wd6in"]
-[ext_resource type="Texture2D" uid="uid://dypd23657kr4k" path="res://assets/batendCORRIGIDO.png" id="3_3t5fr"]
-[ext_resource type="Texture2D" uid="uid://dwy1co8q6twv1" path="res://assets/buttonCORRIGIDO.png" id="3_8dbas"]
-[ext_resource type="Texture2D" uid="uid://bw01nlbqd2nhy" path="res://assets/dashFranzz.png" id="4_8fqcf"]
-[ext_resource type="FontFile" uid="uid://crcoxnuvwadrg" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="4_ix8jy"]
-[ext_resource type="Texture2D" uid="uid://b14puffs43r6y" path="res://assets/COMANOPLAidle.png" id="5_iwr6g"]
-[ext_resource type="Texture2D" uid="uid://cddo2l0tuifqh" path="res://assets/COMANPLAANDANDO.png" id="6_frk0s"]
-[ext_resource type="AudioStream" uid="uid://bugeivo48e13k" path="res://assets/dialogos/Laura-1.wav" id="6_gwiso"]
-[ext_resource type="AudioStream" uid="uid://dqxw8ll46r78j" path="res://assets/dialogos/Laura-3.wav" id="12_3xowu"]
-[ext_resource type="AudioStream" uid="uid://4weara52usft" path="res://assets/dialogos/Nathan-1.wav" id="12_w1s2b"]
-[ext_resource type="AudioStream" uid="uid://ca8bv5rxkjupj" path="res://assets/songs/musics/Fase-2.ogg" id="13_874iw"]
-[ext_resource type="AudioStream" uid="uid://rvavr4dp2a3f" path="res://assets/dialogos/Nathan-2.wav" id="14_16bke"]
+[ext_resource type="Texture2D" uid="uid://duccxdfxvjgy0" path="res://assets/linhasdotempo.jpeg" id="2_wd6in"]
+[ext_resource type="Texture2D" uid="uid://f87ap0dws0b3" path="res://assets/batendCORRIGIDO.png" id="3_3t5fr"]
+[ext_resource type="Texture2D" uid="uid://da5a2v7v3muqv" path="res://assets/buttonCORRIGIDO.png" id="3_8dbas"]
+[ext_resource type="Texture2D" uid="uid://dvv382krf0li5" path="res://assets/dashFranzz.png" id="4_8fqcf"]
+[ext_resource type="FontFile" uid="uid://bmlxe3q812lb2" path="res://assets/fontes/the_last_shuriken/The Last Shuriken.ttf" id="4_ix8jy"]
+[ext_resource type="Texture2D" uid="uid://bwk3ltjfoaiax" path="res://assets/COMANOPLAidle.png" id="5_iwr6g"]
+[ext_resource type="Texture2D" uid="uid://bd5ggyqxf854v" path="res://assets/COMANPLAANDANDO.png" id="6_frk0s"]
+[ext_resource type="AudioStream" uid="uid://dweacag4enr7" path="res://assets/dialogos/Laura-1.wav" id="6_gwiso"]
+[ext_resource type="AudioStream" uid="uid://kiuyeg3jqvle" path="res://assets/dialogos/Laura-3.wav" id="12_3xowu"]
+[ext_resource type="AudioStream" uid="uid://wlllary1llam" path="res://assets/dialogos/Nathan-1.wav" id="12_w1s2b"]
+[ext_resource type="AudioStream" uid="uid://dprqf882e5pni" path="res://assets/songs/musics/Fase-2.ogg" id="13_874iw"]
+[ext_resource type="AudioStream" uid="uid://bvgutlxujhpq8" path="res://assets/dialogos/Nathan-2.wav" id="14_16bke"]
 [ext_resource type="Script" path="res://addons/post_processing/node/post_process.gd" id="14_t6b3e"]
 [ext_resource type="Script" path="res://addons/post_processing/resource/post_processing_configuration.gd" id="15_u5ncm"]
-[ext_resource type="AudioStream" uid="uid://bdv6d6irnukmg" path="res://assets/songs/sound efects/tiro.wav" id="17_whw3l"]
-[ext_resource type="Texture2D" uid="uid://ddwsfxqd6nq6c" path="res://assets/franzmanoplapulando.png" id="20_02f7m"]
+[ext_resource type="AudioStream" uid="uid://cn5n0fmer7vak" path="res://assets/songs/sound efects/tiro.wav" id="17_whw3l"]
+[ext_resource type="Texture2D" uid="uid://bqoyglbsgo6p7" path="res://assets/franzmanoplapulando.png" id="20_02f7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6m88q"]
 size = Vector2(269, 49)
@@ -636,15 +636,19 @@ shape = SubResource("RectangleShape2D_m1cw5")
 
 [node name="tecelao1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_gwiso")
+volume_db = 1.0
 
 [node name="tecelao2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_3xowu")
+volume_db = 1.0
 
 [node name="sombra1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_w1s2b")
+volume_db = 0.5
 
 [node name="sombra3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_16bke")
+volume_db = 0.5
 
 [node name="cruel" type="Timer" parent="."]
 wait_time = 5.0

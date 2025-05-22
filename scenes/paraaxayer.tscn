@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnuyb6cntsymc"]
 
-[ext_resource type="Texture2D" uid="uid://t3mjsminq22e" path="res://assets/fundo.png" id="1_k34c8"]
-[ext_resource type="Texture2D" uid="uid://01gql6jcjwh4" path="res://assets/layer3.png" id="2_4ht1e"]
-[ext_resource type="Texture2D" uid="uid://c3q32taa6nxc5" path="res://assets/layer2.png" id="3_1k5po"]
-[ext_resource type="Texture2D" uid="uid://7uql3o6nnti4" path="res://assets/layer1.png" id="4_1eaj8"]
+[ext_resource type="Texture2D" uid="uid://djod6j42c22x4" path="res://assets/fundo.png" id="1_k34c8"]
+[ext_resource type="Texture2D" uid="uid://db38vi6nlkgbs" path="res://assets/layer3.png" id="2_4ht1e"]
+[ext_resource type="Texture2D" uid="uid://by227ena22j7q" path="res://assets/layer2.png" id="3_1k5po"]
+[ext_resource type="Texture2D" uid="uid://2nirl34isqvn" path="res://assets/layer1.png" id="4_1eaj8"]
 
 [node name="paraaxayer" type="Node2D"]
 position = Vector2(-16, 192)

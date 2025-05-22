@@ -1,11 +1,11 @@
 [gd_scene load_steps=50 format=3 uid="uid://duj5pcel4u7jw"]
 
 [ext_resource type="Script" path="res://script/solmutad.gd" id="1_1mwi1"]
-[ext_resource type="Texture2D" uid="uid://6d2juvt6wngo" path="res://assets/idlesPhase3.png" id="3_8li4h"]
+[ext_resource type="Texture2D" uid="uid://cxspumleucorx" path="res://assets/idlesPhase3.png" id="3_8li4h"]
 [ext_resource type="PackedScene" uid="uid://buvsoktmryxka" path="res://scenes/tiro.tscn" id="3_tcevo"]
-[ext_resource type="Texture2D" uid="uid://qr6dwo5r6g50" path="res://assets/soldadoF3ANDANDO.png" id="4_k057u"]
-[ext_resource type="Texture2D" uid="uid://b5m228yo5sq8k" path="res://assets/idleFASE3.png" id="5_mu73m"]
-[ext_resource type="Texture2D" uid="uid://dc30q0l0nd5cu" path="res://assets/soldadoF3ANDANDO2.png" id="6_ss547"]
+[ext_resource type="Texture2D" uid="uid://com68yigm0f4c" path="res://assets/soldadoF3ANDANDO.png" id="4_k057u"]
+[ext_resource type="Texture2D" uid="uid://d3fkuesrhh72b" path="res://assets/idleFASE3.png" id="5_mu73m"]
+[ext_resource type="Texture2D" uid="uid://duvts4ap8ha8q" path="res://assets/soldadoF3ANDANDO2.png" id="6_ss547"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mx3f6"]
 atlas = ExtResource("3_8li4h")
